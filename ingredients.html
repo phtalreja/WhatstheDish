@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- class="Box" : This is the id of the border that will go around the content. -->
-<!-- id="apples": This is the id for the apples checkbox -->
-<!-- id="bananas": This is the id for the apples checkbox -->
+<!-- div class="Fruits": This is the box surrounding all the fruit section -->
+<!-- div class="container": This is the box surrounding the checkboxes of the fruit. -->
+<!-- div class="fruits1", class ="fruits2", class="fruits3": Each class is a section of the fruits, (5 fruits in each section.) -->
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
@@ -12,13 +13,29 @@
     <form method="post">
         <div class="Fruits">
           <h3>Fruits</h3>
-          <input type="Checkbox" id="apples">Apples</input>
+          <div class="container">
+            <div id="fruits1">
+
+              <input type="Checkbox"> Apples</input>
             <br>
-              <input type="Checkbox" id="bananas">Bananas</input>
+              <input type="Checkbox"> Bananas</input>
             <br>
-              <input type="Checkbox" id="pears">Pears</input>
+              <input type="Checkbox"> Pears</input>
             <br>
-              <input type="checkbox" id="lemon">Lemon</input>
+              <input type="checkbox"> Lemon</input>
+            <br>
+              <input type="checkbox"> Oranges</input>
+            <br>
+              </div>
+
+              <div id="fruits2">
+                <input type="checkbox"> Pineapples</input>
+              <br>
+                <input type="checkbox"> Strawberries</input>
+              <br>
+              </div>
+
+            </div>
         </div>
 
 
