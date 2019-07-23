@@ -1,0 +1,39 @@
+/* .Box {
+    width: 700px;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 0px 430px 0px 430px;
+    display: block;
+  } */
+h1{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+h3{
+    font-size: 30px;
+  }
+.Type {
+  width: 475px;
+  padding: 0px 0px 15px 15px;
+  border: solid grey;
+  margin: 10px 485px 0px 485px;
+  border: 2px outset;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+.container{
+  display:grid;
+  grid-column: auto auto auto;
+  width: auto;
+}
+
+#items1{
+  grid-column: 1;
+}
+#items2{
+  grid-column: 2;
+}
+#items3{
+  grid-column: 3;
+}
