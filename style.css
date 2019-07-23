@@ -1,0 +1,40 @@
+/* .Box {
+    width: 700px;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 0px 430px 0px 430px;
+    display: block;
+  } */
+h1{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+h3{
+    font-size: 30px;
+    line-height: 1;
+  }
+.Fruits {
+  width: 475px;
+  padding: 5px 15px 10px 15px;
+  border: solid grey;
+  margin: 15px 500px 0px 500px;
+  float:left;
+  border: 2px outset;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+.container{
+  display:grid;
+  grid-column: auto auto auto;
+  width: auto;
+}
+#fruits1{
+  grid-column: 1;
+}
+#fruits2 {
+  grid-column: 2;
+}
+#fruits3{
+  grid-column: 3;
+}
