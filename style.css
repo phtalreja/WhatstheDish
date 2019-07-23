@@ -1,0 +1,32 @@
+#title {
+  color: #723041;
+  font-family: 'Roboto', sans-serif;
+  font-size: 200px;
+  text-align: center;
+}
+
+.start {
+  border: 5px;
+  border-style: solid;
+  border-color: #723041;
+  background-color: #F2EEEA;
+  padding: 14px 28px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  height: 50px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.start:hover {background: #dbd8d5;}
+
+a {
+  text-decoration: none;
+  color: #723041;
+}
+
+body {
+  background-color: #F2EEEA;
+}
