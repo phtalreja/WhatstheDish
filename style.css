@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #title {
   color: #723041;
   font-family: 'Roboto', sans-serif;
@@ -29,4 +30,41 @@ a {
 
 body {
   background-color: #F2EEEA;
+=======
+/* .Box {
+    width: 700px;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 0px 430px 0px 430px;
+    display: block;
+  } */
+h1{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+h3{
+    font-size: 30px;
+    line-height: 1;
+  }
+.Fruits {
+  width: 475px;
+  padding: 0px 10px 10px 10px;
+  border: solid grey;
+  margin: 15px 500px 0px 500px;
+  float:left;
+  border: 2px outset;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+.container{
+  display:grid;
+  grid-column: auto auto auto;
+}
+#fruits1{
+  grid-column: 1;
+}
+#fruits2 {
+  grid-column: 2;
+>>>>>>> be5e4b80718af72d64c112502b6c9dbacdd972c5
 }
