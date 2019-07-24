@@ -18,8 +18,9 @@
     </ul>
     <h1>  Select Your Ingredients!</h1>
     <!-- This is the fruit section -->
-    <form method="post">
-        <div class="Type">
+    <form method="post" name="items">
+      <div class="Page_container">
+        <div class="Fruits">
           <h3>Fruits</h3>
           <div class="container">
             <div id="items1">
@@ -62,8 +63,9 @@
 
             </div>
         </div>
+        <br>
 <!-- This is the Vegetable section -->
-        <div class="Type">
+        <div class="Vegetables">
           <h3>Vegetables</h3>
           <div class="container">
             <div id="items1">
@@ -106,8 +108,9 @@
 
             </div>
         </div>
+        <br>
 <!-- This is the meat section -->
-  <div class="Type">
+  <div class="Meats">
     <h3>Meats</h3>
       <div class="container">
         <div id="items1">
@@ -151,7 +154,8 @@
     </div>
 </div>
 <!-- This is the dairy section -->
-<div class="Type">
+<br><br>
+<div class="Dairy">
   <h3>Dairy</h3>
     <div class="container">
       <div id="items1">
@@ -194,9 +198,10 @@
 
   </div>
 </div>
+<br><br>
 <!-- This is the common section -->
-<div class="Type">
-  <h3>Any Common Items?</h3>
+<div class="Condiments">
+  <h3>Condiments and Spices</h3>
     <div class="container">
       <div id="items1">
 
@@ -239,10 +244,12 @@
   </div>
 </div>
 <br>
-<h4>What Else is in Your Kitchen?</h4>
-<textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!"></textarea>
+    <h4>What Else is in Your Kitchen?</h4>
+      <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
+        </textarea>
+</div>
 <br>
-<a href="restrictions.html">
+<a href="/restrictions">
   <input type="button" value="Next" id="next">
 </a>
 <br><br><br><br><br>

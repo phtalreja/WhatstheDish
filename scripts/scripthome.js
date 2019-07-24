@@ -1,8 +1,11 @@
 console.log("It works!");
 
+function onDivClick() {
+  
+}
 
 function init() {
-  console.log("alright");
+  $("#div").click(onDivClick);
 }
 
 $(document).ready(init);
