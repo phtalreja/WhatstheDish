@@ -7,6 +7,10 @@
   <head>
     <link rel="stylesheet" href="styles/style.css">
     <title>Ingredients</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src ="scripts/ingredientsscript.js"></script>
   </head>
   <body>
     <ul class="bubbles">
@@ -289,11 +293,18 @@
         </div>
       </div>
       <br>
-      <h4>What Else is in Your Kitchen?</h4>
-        <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
+      <!-- <h4>What Else is in Your Kitchen?</h4> -->
+        <!-- <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
         </textarea>
-        <input type="submit" value="Next" id="next">
-      </div>
+        <input type="submit" value="Next" id="next"> -->
+
+
+<!-- autocomplete entry for what else is in your kitchen -->
+
+        <div class="ui-widget">
+          <label for="tags">What else is in your kitchen?: </label>
+          <input id="tags" size="50">
+        </div>
 <br>
 <br><br><br><br>
   <br>
