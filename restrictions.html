@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="restrictions_styles.css">
+    <link rel="stylesheet" href="/styles/restrictions_styles.css">
 <!-- javascript for autocomplete function https://jqueryui.com/autocomplete/#default -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -18,66 +18,50 @@
           <div id="items1">
             <h3>Allergies</h3>
                 <input type="Checkbox" name="treenuts">Tree Nuts</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="peanuts">Peanuts</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="shellfish">Shellfish</input>
-              <br>
+                <br>
                 <input type="checkbox" name="wheat">Wheat</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="soy">Soy</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="fish">Fish</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="eggs">Eggs</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="sesame">Sesame</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="kiwi">Kiwi</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="banana">Banana</input>
-              <br>
+                <br>
                 <input type="Checkbox" name="avocado">Avocado</input>
-              <br>
+                <br>
     <!-- autocomplete checkbox -->
                 <div class="ui-widget" id="other_allergies">
                 <label for="tags">Other Allergies </label>
                 <input id="tags">
                 </div>
-
               <br>
           </div>
-        <div id="items2">
-          <h3>Dietary Restrictions</h3>
-              <input type="Checkbox" name="vegan">Vegan (exludes dairy products, meat, poultry, fish, eggs, gelatin, honey)</input>
-            <br>
-              <input type="Checkbox" name="vegetarian">Vegetarian (excludes recipes with meat, poultry, fish, and eggs)</input>
-            <br>
-              <input type="Checkbox" name="gluten">Gluten-Free (excludes recipes with wheat, barley, rye, oats)</input>
-            <br>
-              <input type="Checkbox" name="diabetic">Diabetic (excludes recipes with white bread, pasta, rice, honey, agave, maple syrup, fruit juice)</input>
-            <br>
-        </div>
-        <br>
-
-
-
-
-        <!-- animated submit button code: https://codepen.io/nicoencarnacion/pen/XpaRQV -->
-        <div class='containerbutton'>
-              <a class='animated-arrow' href='/recipes'>
-                <span class='the-arrow -left'>
-                  <span class='shaft'></span>
-                </span>
-                <span class='main'>
-                  <span class='text'>
-                    Get Your Recipes
-                  </span>
-                  <span class='the-arrow -right'>
-                    <span class='shaft'></span>
-                  </span>
-                </span>
-              </a>
+          <div id="items2">
+            <h3>Dietary Restrictions</h3>
+                <input type="Checkbox" name="vegan">Vegan (exludes dairy products, meat, poultry, fish, eggs, gelatin, honey)</input>
+                <br>
+                <input type="Checkbox" name="vegetarian">Vegetarian (excludes recipes with meat, poultry, fish, and eggs)</input>
+                <br>
+                <input type="Checkbox" name="gluten">Gluten-Free (excludes recipes with wheat, barley, rye, oats)</input>
+                <br>
+                <input type="Checkbox" name="diabetic">Diabetic (excludes recipes with white bread, pasta, rice, honey, agave, maple syrup, fruit juice)</input>
+                <br>
           </div>
+          <br>
+
+          <div class='containerbutton'>
+                <input type="submit"> Get Your Recipes </input>
+            </div>
+    </form>
   </body>
 </html>
