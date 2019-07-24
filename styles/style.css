@@ -22,6 +22,7 @@ h4{
     float: left;
     margin: 10px 485px 2px 485px;
     z-index: 1;
+    grid-column: 2;
   }
   input{
     word-spacing: 1.5px;
@@ -29,13 +30,24 @@ h4{
   }
   textarea{
     width: 525px;
-    margin: 0px 485px 0px 485px;
     font-size: 18px;
     z-index: 1;
     height: 100px;
+    grid-column: 2;
   }
+.Page_container{
+  display: grid;
+  grid-column: auto auto;
+  grid-row: 3;
+  width: auto;
+  height:auto;
+  padding: 40px 40px 40px 40px;
+  grid-template-rows: 300px 350px 300px;
 
-.Type {
+}
+
+.Fruits {
+  grid-column: 1;
   width: 525px;
   padding: 0px 0px 15px 15px;
   /* border: 2px outset; */
@@ -43,12 +55,85 @@ h4{
   -moz-border-radius: 40px 40px 40px 40px;
   -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #db9bdb;
-  margin: 10px 485px 0px 485px;
+  /* margin: 10px 485px 0px 485px; */
+  margin-left: 75px;
   box-shadow: 10px 10px grey;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
 }
+
+.Vegetables {
+  grid-column: 1;
+  grid-row: 2;
+  width: 525px;
+  padding: 0px 0px 15px 15px;
+  height:257px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  border: 8px outset #db9bdb;
+  margin-top: 15px;
+  margin-left: 75px;
+  box-shadow: 10px 10px grey;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
+}
+
+.Meats{
+  grid-column: 1;
+  grid-row: 3;
+  width: 525px;
+  padding: 0px 0px 15px 15px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  border: 8px outset #db9bdb;
+  margin-left: 75px;
+  margin-top: 15px;
+  box-shadow: 10px 10px grey;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
+}
+.Condiments{
+  grid-column: 2;
+  grid-row: 1;
+  width: 525px;
+  padding: 0px 0px 15px 15px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  border: 8px outset #db9bdb;
+  margin-left: 75px;
+  /* margin: 10px 485px 0px 485px; */
+  box-shadow: 10px 10px grey;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
+}
+.Dairy{
+  grid-column: 2;
+  grid-row: 2;
+  width: 525px;
+  padding: 0px 0px 15px 15px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  border: 8px outset #db9bdb;
+  margin: 75px;
+  /* margin: 10px 485px 0px 485px; */
+  box-shadow: 10px 10px grey;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
+}
+
 .container{
   display:grid;
   grid-column: auto auto auto;
