@@ -19,6 +19,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class RecipesHandler(webapp2.RequestHandler):
     def get(self):
+        print("Hello!")
         recipes_template = the_jinja_env.get_template("recepies.html")
         self.response.write(recipes_template.render())
 
@@ -27,6 +28,7 @@ class RecipesHandler(webapp2.RequestHandler):
         # url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients"
         userIngredients = []
         userIngredients.append(self.request.get("items"))
+        print(userIngredients)
         template_vars = {
 
         }
@@ -51,6 +53,12 @@ class RestrictionsHandler(webapp2.RequestHandler):
     def get(self):
         restrictions_template = the_jinja_env.get_template("restrictions.html")
         self.response.write(restrictions_template.render())
+
+    def post(self):
+        userstuff = self.request.get("items")
+        self.response.write("checkpoint")
+        print("howdy")
+        print(self.request.POST.items())
 
 app = webapp2.WSGIApplication ([
     ("/", MainHandler),

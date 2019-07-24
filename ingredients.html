@@ -18,7 +18,7 @@
     </ul>
     <h1>  Select Your Ingredients!</h1>
     <!-- This is the fruit section -->
-    <form method="post" name="items">
+    <form method="post" name="items" action="/restrictions">
       <div class="Page_container">
         <div class="Fruits">
           <h3>Fruits</h3>
@@ -26,38 +26,38 @@
             <div id="items1">
 
               <input type="Checkbox"> Apples</input>
-            <br>
+              <br>
               <input type="Checkbox"> Bananas</input>
-            <br>
+              <br>
               <input type="Checkbox"> Strawberries</input>
-            <br>
+              <br>
               <input type="checkbox"> Blueberries</input>
-            <br>
+              <br>
               <input type="checkbox"> Oranges</input>
-            <br>
+              <br>
               </div>
 
               <div id="items2">
                 <input type="checkbox"> Pineapples</input>
-              <br>
+                <br>
                 <input type="checkbox"> Pears</input>
-              <br>
+                <br>
                 <input type="checkbox"> Lemons</input>
-              <br>
+                <br>
                 <input type="checkbox"> Grapes</input>
-              <br>
+                <br>
                 <input type="checkbox"> Watermelon</input>
               </div>
 
               <div id="items3">
                 <input type="checkbox"> Mango</input>
-              <br>
+                <br>
                 <input type="checkbox"> Avocado</input>
-              <br>
+                <br>
                 <input type="checkbox"> Blackberries</input>
-              <br>
+                <br>
                 <input type="checkbox"> Cherries</input>
-              <br>
+                <br>
                 <input type="checkbox"> Peach</input>
               </div>
 
@@ -71,9 +71,9 @@
             <div id="items1">
 
               <input type="Checkbox"> Asparagus</input>
-            <br>
+              <br>
               <input type="Checkbox"> Celery</input>
-            <br>
+              <br>
               <input type="Checkbox"> Broccoli</input>
             <br>
               <input type="checkbox"> Cauliflower</input>
@@ -110,59 +110,60 @@
         </div>
         <br>
 <!-- This is the meat section -->
-  <div class="Meats">
-    <h3>Meats</h3>
-      <div class="container">
-        <div id="items1">
+        <div class="Meats">
+          <h3>Meats</h3>
+            <div class="container">
+              <div id="items1">
 
-          <input type="Checkbox"> Beef</input>
-        <br>
-          <input type="Checkbox"> Chicken</input>
-        <br>
-          <input type="Checkbox"> Bacon</input>
-        <br>
-          <input type="checkbox"> Pork</input>
-        <br>
-          <input type="checkbox"> Ham</input>
-        <br>
+                <input type="Checkbox"> Beef</input>
+                <br>
+                <input type="Checkbox"> Chicken</input>
+                <br>
+                <input type="Checkbox"> Bacon</input>
+                <br>
+                <input type="checkbox"> Pork</input>
+                <br>
+                <input type="checkbox"> Ham</input>
+                <br>
+            </div>
+
+              <div id="items2">
+                <input type="checkbox"> Lamb</input>
+                <br>
+                <input type="checkbox"> Turkey</input>
+                <br>
+                <input type="checkbox"> Sausage</input>
+                <br>
+                <input type="checkbox"> Duck</input>
+                <br>
+                <input type="checkbox"> Goose</input>
+             </div>
+
+             <div id="items3">
+                <input type="checkbox"> Rabbit</input>
+                <br>
+                <input type="checkbox"> Salmon</input>
+                <br>
+                <input type="checkbox"> Fish</input>
+                <br>
+                <input type="checkbox"> Tuna</input>
+                <br>
+                <input type="checkbox"> Salami</input>
+            </div>
+
+          </div>
       </div>
-
-        <div id="items2">
-          <input type="checkbox"> Lamb</input>
-        <br>
-          <input type="checkbox"> Turkey</input>
-        <br>
-          <input type="checkbox"> Sausage</input>
-        <br>
-          <input type="checkbox"> Duck</input>
-        <br>
-          <input type="checkbox"> Goose</input>
-       </div>
-
-       <div id="items3">
-          <input type="checkbox"> Rabbit</input>
-        <br>
-          <input type="checkbox"> Salmon</input>
-        <br>
-          <input type="checkbox"> Fish</input>
-        <br>
-          <input type="checkbox"> Tuna</input>
-        <br>
-          <input type="checkbox"> Salami</input>
-      </div>
-
-    </div>
-</div>
 <!-- This is the dairy section -->
-<br><br>
-<div class="Dairy">
-  <h3>Dairy</h3>
-    <div class="container">
-      <div id="items1">
+      <br><br>
+      <div class="Dairy">
+        <h3>Dairy</h3>
+          <div class="container">
+            <div id="items1">
+
 
         <input type="Checkbox"> Milk</input>
       <br>
-        <input type="Checkbox"> Cottage Cheese</input>
+        <input type="Checkbox"> Cheese</input>
       <br>
         <input type="Checkbox"> Yogurt</input>
       <br>
@@ -172,29 +173,27 @@
       <br>
     </div>
 
-      <div id="items2">
-        <input type="checkbox"> Sour Cream</input>
-      <br>
-        <input type="checkbox"> Cream Cheese</input>
-      <br>
-        <input type="checkbox"> Whip Cream</input>
-      <br>
-        <input type="checkbox"> Condensed Milk</input>
-      <br>
-        <input type="checkbox"> Cheddar Cheese</input>
-     </div>
 
-     <div id="items3">
-        <input type="checkbox"> Greek Yogurt</input>
+  </div>
+</div>
+<!-- This is the legumes section -->
+<div class="Grains">
+  <h3>Grains</h3>
+    <div class="container">
+      <div id="items1">
+
+        <input type="Checkbox"> Oats</input>
       <br>
-        <input type="checkbox"> Milk Powder</input>
+        <input type="Checkbox"> Wheat</input>
       <br>
-        <input type="checkbox"> Frozen Yogurt</input>
+        <input type="Checkbox"> Rice</input>
       <br>
-        <input type="checkbox"> Tuna</input>
+        <input type="checkbox"> Bread</input>
       <br>
-        <input type="checkbox"> Salami</input>
+        <input type="checkbox"> Pasta</input>
+      <br>
     </div>
+
 
   </div>
 </div>
@@ -205,53 +204,102 @@
     <div class="container">
       <div id="items1">
 
-        <input type="Checkbox"> Salt</input>
-      <br>
-        <input type="Checkbox"> Pepper</input>
-      <br>
-        <input type="Checkbox"> Flour</input>
-      <br>
-        <input type="checkbox"> Olive Oil</input>
-      <br>
-        <input type="checkbox"> Mayonnaise</input>
-      <br>
-    </div>
+              <input type="Checkbox"> Milk</input>
+              <br>
+              <input type="Checkbox"> Cottage Cheese</input>
+              <br>
+              <input type="Checkbox"> Yogurt</input>
+              <br>
+              <input type="checkbox"> Butter</input>
+              <br>
+              <input type="checkbox"> Ice cream</input>
+            <br>
+          </div>
 
-      <div id="items2">
-        <input type="checkbox"> Ketchup</input>
-      <br>
-        <input type="checkbox"> Sugar</input>
-      <br>
-        <input type="checkbox"> Cornstarch</input>
-      <br>
-        <input type="checkbox"> Honey</input>
-      <br>
-        <input type="checkbox"> Vinegar</input>
-     </div>
+            <div id="items2">
+              <input type="checkbox"> Sour Cream</input>
+              <br>
+              <input type="checkbox"> Cream Cheese</input>
+              <br>
+              <input type="checkbox"> Whip Cream</input>
+              <br>
+              <input type="checkbox"> Condensed Milk</input>
+              <br>
+              <input type="checkbox"> Cheddar Cheese</input>
+           </div>
 
-     <div id="items3">
-        <input type="checkbox"> Vegetable Oil</input>
-      <br>
-        <input type="checkbox"> Yeast</input>
-      <br>
-        <input type="checkbox"> Bread Crumbs</input>
-      <br>
-        <input type="checkbox"> Rice</input>
-      <br>
-        <input type="checkbox"> Baking Powder</input>
-    </div>
+           <div id="items3">
+              <input type="checkbox"> Greek Yogurt</input>
+              <br>
+              <input type="checkbox"> Milk Powder</input>
+              <br>
+              <input type="checkbox"> Frozen Yogurt</input>
+              <br>
+              <input type="checkbox"> Tuna</input>
+              <br>
+              <input type="checkbox"> Salami</input>
+          </div>
 
-  </div>
-</div>
-<br>
-    <h4>What Else is in Your Kitchen?</h4>
-      <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
+        </div>
+      </div>
+      <br><br>
+      <!-- This is the common section -->
+      <div class="Condiments">
+        <h3>Condiments and Spices</h3>
+          <div class="container">
+              <div id="items1">
+
+
+              <input type="Checkbox"> Salt</input>
+              <br>
+              <input type="Checkbox"> Pepper</input>
+              <br>
+              <input type="Checkbox"> Flour</input>
+              <br>
+              <input type="checkbox"> Olive Oil</input>
+              <br>
+              <input type="checkbox"> Mayonnaise</input>
+              <br>
+            </div>
+
+            <div id="items2">
+              <input type="checkbox"> Ketchup</input>
+              <br>
+              <input type="checkbox"> Sugar</input>
+              <br>
+              <input type="checkbox"> Cornstarch</input>
+              <br>
+              <input type="checkbox"> Honey</input>
+              <br>
+              <input type="checkbox"> Vinegar</input>
+           </div>
+
+           <div id="items3">
+              <input type="checkbox"> Vegetable Oil</input>
+              <br>
+              <input type="checkbox"> Yeast</input>
+              <br>
+              <input type="checkbox"> Bread Crumbs</input>
+              <br>
+              <input type="checkbox"> Rice</input>
+              <br>
+              <input type="checkbox"> Baking Powder</input>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <h4>What Else is in Your Kitchen?</h4>
+        <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
         </textarea>
-</div>
+        <input type="submit" value="Next" id="next">
+      </div>
 <br>
-<a href="/restrictions">
-  <input type="button" value="Next" id="next">
-</a>
+<br><br><br><br>
+  <br>
+  <input type="submit" value="Next" id="next">
+</form>
+
 <br><br><br><br><br>
 <ul class="bubbles">
   <li></li>
