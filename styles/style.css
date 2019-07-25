@@ -1,16 +1,11 @@
-/* .Box {
-    width: 700px;
-    padding: 10px;
-    border: 3px solid black;
-    margin: 0px 430px 0px 430px;
-    display: block;
-  } */
-h1{
+#Select {
     text-align: center;
-    margin-top: 50px;
-    display: block;
+    margin-top: 40px;
     z-index: 1;
-    font-size: 45px;
+    margin-left: 12%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    font-size: 30px;
     color: #595656;
     font-family: 'Vollkorn', serif;
   }
@@ -49,14 +44,20 @@ h4{
     margin-top: 100px;
     margin-left: 75px;
   }
+  label {
+    font-size: 25px;
+    color: #595656;
+    font-family: 'Vollkorn', serif;
+  }
 .Page_container{
   display: grid;
-  grid-column: auto auto;
+  grid-column: auto;
   grid-row: 3;
   width: auto;
   height:auto;
   padding: 40px 40px 40px 40px;
   grid-template-rows: 300px 350px 300px;
+  margin: 0% 25% 10% 25%;
 
 }
 
@@ -117,8 +118,8 @@ h4{
   z-index: 2;
 }
 .Condiments{
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 4;
   width: 525px;
   padding: 0px 0px 15px 15px;
   /* border: 2px outset; */
@@ -135,8 +136,8 @@ h4{
   z-index: 2;
 }
 .Dairy{
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 5;
   width: 200px;
   height:250px;
   padding: 0px 0px 15px 15px;
@@ -155,8 +156,8 @@ h4{
 
 }
 .Grains {
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 5;
   width: 200px;
   height:250px;
   padding: 0px 0px 15px 15px;
@@ -178,8 +179,8 @@ h4{
 
 
 .autocomplete_ingredients {
-  grid-column: 2;
-  grid-row: 3;
+  grid-column: 1;
+  grid-row: 6;
   width: 525px;
   padding: 0px 0px 15px 15px;
   /* border: 2px outset; */
@@ -188,6 +189,7 @@ h4{
   -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
   margin-left: 75px;
+  margin-top: 4%;
   margin-bottom: 15px;
   /* margin: 10px 485px 0px 485px; */
   box-shadow: 10px 10px #F2BBC5;
@@ -227,13 +229,12 @@ h4{
 }
 #next {
   float: right;
-  margin-top: -60px;
-  margin-right: 70px;
+  margin-left: 78%;
   width:100px;
   height: 75px;
   z-index: 1;
-  grid-column: 3;
-  grid-row: 5;
+  grid-column: 1;
+  grid-row: 8;
 }
 #fork{
   opacity:0.1px;
@@ -245,7 +246,16 @@ h4{
   width: 70px;
   height: 90px;
 }
-
+#spatula{
+  opacity:0.1px;
+  width: 30px;
+  height: 70px;
+}
+#Whisk{
+  opacity:0.1px;
+  width: 30px;
+  height: 80px;
+}
 .bubbles {
     top: 0;
     left: 0;
@@ -294,7 +304,7 @@ h4{
     left: 60%;
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
-    -webkit-animation-duration: 18s;
+    -webkit-animation-duration: 15s;
     animation-duration: 18s;
     opacity: 0.2;
 }
@@ -302,23 +312,23 @@ h4{
 .bubbles li:nth-child(4) {
     width: 80px;
     height: 80px;
-    left: 80%;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-duration: 22s;
+    left: 90%;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 20s;
     animation-duration: 22s;
-    opacity: 0.2px;
+    opacity: 0.2;
 }
 
 .bubbles li:nth-child(5) {
     width: 50px;
     height: 50px;
-    left: 50%;
-    -webkit-animation-delay: 7s;
-    animation-delay: 2s;
+    left: 0%;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
     -webkit-animation-duration: 12s;
     animation-duration: 12s;
-    opacity: 0.2px;
+    opacity: 0.2;
 }
 
 @-webkit-keyframes   square {
