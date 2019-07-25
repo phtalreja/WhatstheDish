@@ -5,6 +5,17 @@
     margin: 0px 430px 0px 430px;
     display: block;
   } */
+
+
+/* styling for the autocomplete is below */
+.ui-autocomplete {
+  height: 20px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+/* end of styling for the autocomplete */
+
 h1{
     text-align: center;
     margin-top: 50px;
@@ -41,16 +52,6 @@ h3{
   grid-column: 3;
 }
 
-
-
-/* button */
-
-/* body {
-  background: #121212;
-  height: 100%;
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-} */
 
 .containerbutton {
   display: flex;
