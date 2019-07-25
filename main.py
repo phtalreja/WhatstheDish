@@ -52,7 +52,9 @@ class RecipesHandler(webapp2.RequestHandler):
         userRestrictions = self.request.POST.items()
 
         apiKey = "40b69cdc47msh8fffdf56dc7aafdp13a859jsn7ee5daeb7842"
+
         url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients="
+        # url2 = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"
 
         for x in userIngredients:
             for y in x:
@@ -67,19 +69,46 @@ class RecipesHandler(webapp2.RequestHandler):
         template_vars = {
             "options":[],
             "images":[],
-
+            "percentages":[],
         }
 
         content = response.content
         as_json = json.loads(content)
-        for x in as_json:
-             template_vars["options"].append(x["title"])
-             template_vars["images"].append(x["image"])
-             # usedIngredients = len(x["usedIngredients"])
-             # missingIngredients = len(x["missedIngredients"])
-             # self.response.write(100 * float(usedIngredients)/float(missingIngredients))
+
+        print("work please")
+        for x in  as_json:
+            url2 = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"
+            url2 = url2 + str(x["id"]) + "/information"
+
+            response2 = urlfetch.fetch(url2, method=1, headers= {
+                "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+                "X-RapidAPI-Key": "40b69cdc47msh8fffdf56dc7aafdp13a859jsn7ee5daeb7842"
+            })
+
+            content2 = response2.content
+            as_json2 = json.loads(content2)
+
+            print(url2)
+            template_vars["options"].append(x["title"])
+            template_vars["images"].append(x["image"])
+            usedIngredients = len(x["usedIngredients"])
+            missingIngredients = len(x["missedIngredients"])
+            template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
+
+            # for y in userRestrictions:
+            #     for item in as_json2["extendedIngredients"]:
+            #         if y!="on" or y== as_json2["extendedIngredients"]["name"]:
+            #             print("nope")
+            #             print(as_json2["extendedIngredients"]["name"])
+            #         else:
+            #             template_vars["options"].append(x["title"])
+            #             template_vars["images"].append(x["image"])
+            #             usedIngredients = len(x["usedIngredients"])
+            #             missingIngredients = len(x["missedIngredients"])
+            #             template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
 
         self.response.write(recipes_template.render(template_vars))
+
 
 
 
