@@ -1,73 +1,13 @@
 /* title style */
-#title{
+/* #title{
   font-family: 'Vollkorn', serif;
   text-align: center;
   font-size: 175px;
-  color: #595656;
-}
+  color: #595655;
+} */
 
 body {
-  background-color: #ffffff;
-}
-
-/* slanted block */
-
-.edge--bottom {
-  position: relative;
-  z-index: 1;
-}
-.edge--bottom:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-.edge--bottom:after {
-  bottom: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
-.edge--bottom--reverse {
-  position: relative;
-  z-index: 1;
-}
-.edge--bottom--reverse:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-.edge--bottom--reverse:after {
-  bottom: 0;
-  -webkit-transform: skewY(1.5deg);
-          transform: skewY(1.5deg);
-  -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
-}
-
-.-berry {
-  background: #025940;
-}
-
-.block {
-  color: #fff;
-  font-family: 'Fira Sans', sans-serif;
-  margin: 0 0 200px;
-  padding: 20% 20px;
-  text-align: center;
+  background-color: #F2D0D3;
 }
 
 h1 {
@@ -81,11 +21,16 @@ p {
   margin-top: 0.5em;
 }
 
+#title {
+  font-family: 'Vollkorn', serif;
+  text-align: center;
+  font-size: 175px;
+  color: #ffffff;
+}
 
 
 
-
-/* button */
+/* start of animated button */
 
 .containerbutton {
   display: flex;
