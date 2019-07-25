@@ -12,10 +12,16 @@
   </head>
     <h1>These are the Recipes that Match You!</h1>
   <body>
-    <div class="">
+    <div class="recipesToChoose">
       <ul>
-        <li></li>
+        {% for i in range(options|length) %}
+        <li> <div class="foodImages"> <img src={{images[i]}}>
+             </div>
+             <div class="">
+               {{options[i]}}
+             </div>
+        </li>
+        {% endfor %}
       </ul>
-    </div>
   </body>
 </html>
