@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/styles/restrictions_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- javascript for autocomplete function https://jqueryui.com/autocomplete/#default -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <script src ="scripts/autocomplete.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src ="scripts/autocomplete.js"></script>
+  <!-- above is jquery stuff I imported for the autocomplete to work -->
 
   </head>
   <body>
@@ -39,11 +41,13 @@
                 <br>
                 <input type="Checkbox" name="avocado">Avocado</input>
                 <br>
+
     <!-- autocomplete checkbox -->
-                <div class="ui-widget" id="other_allergies">
-                <label for="tags">Other Allergies </label>
-                <input id="tags">
-                </div>
+    <div class="ui-widget">
+      <label for="tags">Other Allergies: </label>
+      <input id="tags">
+    </div>
+  <!-- end of code for autocomplete checkbox -->
               <br>
           </div>
           <div id="items2">
@@ -58,9 +62,9 @@
                 <br>
           </div>
           <br>
-
+          <h3>Get Your Recipes</h3>
           <div class='containerbutton'>
-                <input type="submit"> Get Your Recipes </input>
+                <input type="submit"></input>
             </div>
     </form>
   </body>
