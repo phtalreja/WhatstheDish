@@ -72,6 +72,7 @@ class RecipesHandler(webapp2.RequestHandler):
             "percentages":[],
             "cookTimes": [],
             "directions":[],
+            "missing":[],
         }
 
         content = response.content
@@ -98,6 +99,7 @@ class RecipesHandler(webapp2.RequestHandler):
             template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
             template_vars["cookTimes"].append(as_json2["readyInMinutes"])
             template_vars["directions"].append(as_json2["instructions"])
+            template_vars["missing"].append(as_json["missedIngredients"])
 
             #Check this part
             i = 0
