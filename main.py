@@ -88,7 +88,9 @@ class RecipesHandler(webapp2.RequestHandler):
             content2 = response2.content
             as_json2 = json.loads(content2)
 
-            print(url2)
+            #json2 does not parse correctly
+            #print(as_json2["extendedIngredients"][0]["name"])
+
             template_vars["options"].append(x["title"])
             template_vars["images"].append(x["image"])
             usedIngredients = len(x["usedIngredients"])
@@ -109,7 +111,10 @@ class RecipesHandler(webapp2.RequestHandler):
 
         self.response.write(recipes_template.render(template_vars))
 
-
+class ChoosenRecipeHandler(webapp2.RequestHandler):
+    def get(self):
+        theReceipe_template = the_jinja_env.get_template("choosenRecipe.html")
+        self.request.get(theReceipe_template.render())        
 
 
 app = webapp2.WSGIApplication ([
@@ -117,4 +122,5 @@ app = webapp2.WSGIApplication ([
     ("/recipes", RecipesHandler),
     ("/ingredients", IngredientsHandler),
     ("/restrictions", RestrictionsHandler),
+    ("/choosenrecipe", ChoosenRecipeHandler),
 ], debug=True)
