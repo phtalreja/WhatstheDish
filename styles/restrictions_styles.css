@@ -7,6 +7,18 @@
   } */
 
 
+/* styling for restriction icons (having each item name under the icon picture)*/
+figure {
+    display:inline-block;
+}
+
+/* figcaption {
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 25px;
+} */
+
+
 /* styling for the autocomplete is below */
 .ui-autocomplete {
   max-height: 30px;

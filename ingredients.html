@@ -7,11 +7,15 @@
   <head>
     <link rel="stylesheet" href="styles/style.css">
     <title>Ingredients</title>
+<!-- IMPORTS FOR AUTOCOMPLETE -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <script src ="scripts/autocomplete.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src ="scripts/ingredientsscript.js"></script>
+<!-- END OF AUTOCOMPLETE IMPORTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Vollkorn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
   <body>
     <ul class="bubbles">
@@ -21,16 +25,183 @@
       <li><img id="Whisk" src="https://i.dlpng.com/static/png/3944482_thumb.png"</li>
       <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
     </ul>
-    <div id="Select">
+
+
+    <!-- PROGRESS BAR CODE  -->
+
+      <div class="md-stepper-horizontal orange">
+          <div class="md-step active">
+            <div class="md-step-circle"><span>1</span></div>
+            <div class="md-step-title">Choose Your Ingredients</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+          <div class="md-step">
+            <div class="md-step-circle"><span>2</span></div>
+            <div class="md-step-title">Select Your Restrictions</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+          <div class="md-step">
+            <div class="md-step-circle"><span>3</span></div>
+            <div class="md-step-title">Get Your Recipes</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+        </div>
+
+        <style>
+
+          html {
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            -ms-font-smoothing: antialiased !important;
+          }
+          body {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            color: #555555;
+          }
+          .md-stepper-horizontal {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.5);
+          }
+          .md-stepper-horizontal .md-step {
+            display: table-cell;
+            position: relative;
+            padding: 24px;
+          }
+          .md-stepper-horizontal .md-step:hover,
+          .md-stepper-horizontal .md-step:active {
+            background-color: rgba(0, 0, 0, 0.04);
+          }
+          .md-stepper-horizontal .md-step:active {
+            border-radius: 15% / 75%;
+          }
+          .md-stepper-horizontal .md-step:first-child:active {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .md-stepper-horizontal .md-step:last-child:active {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md-stepper-horizontal .md-step:hover .md-step-circle {
+            background-color: #757575;
+          }
+          .md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+          .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+            display: none;
+          }
+          .md-stepper-horizontal .md-step .md-step-circle {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: #999999;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+          }
+          .md-stepper-horizontal.green .md-step.active .md-step-circle {
+            background-color: #00ae4d;
+          }
+          .md-stepper-horizontal.orange .md-step.active .md-step-circle {
+            background-color: #f96302;
+          }
+          .md-stepper-horizontal .md-step.active .md-step-circle {
+            background-color: rgb(33, 150, 243);
+          }
+          .md-stepper-horizontal .md-step.done .md-step-circle:before {
+            font-family: "FontAwesome";
+            font-weight: 100;
+            content: "\f00c";
+          }
+          .md-stepper-horizontal .md-step.done .md-step-circle *,
+          .md-stepper-horizontal .md-step.editable .md-step-circle * {
+            display: none;
+          }
+          .md-stepper-horizontal .md-step.editable .md-step-circle {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+          }
+          .md-stepper-horizontal .md-step.editable .md-step-circle:before {
+            font-family: "FontAwesome";
+            font-weight: 100;
+            content: "\f040";
+          }
+          .md-stepper-horizontal .md-step .md-step-title {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .md-stepper-horizontal .md-step .md-step-title,
+          .md-stepper-horizontal .md-step .md-step-optional {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.26);
+          }
+          .md-stepper-horizontal .md-step.active .md-step-title {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.87);
+          }
+          .md-stepper-horizontal .md-step.active.done .md-step-title,
+          .md-stepper-horizontal .md-step.active.editable .md-step-title {
+            font-weight: 600;
+          }
+          .md-stepper-horizontal .md-step .md-step-optional {
+            font-size: 12px;
+          }
+          .md-stepper-horizontal .md-step.active .md-step-optional {
+            color: rgba(0, 0, 0, 0.54);
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-left,
+          .md-stepper-horizontal .md-step .md-step-bar-right {
+            position: absolute;
+            top: 36px;
+            height: 1px;
+            border-top: 1px solid #dddddd;
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-right {
+            right: 0;
+            left: 50%;
+            margin-left: 20px;
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-left {
+            left: 0;
+            right: 50%;
+            margin-right: 20px;
+          }
+
+
+        </style>
+    <!-- END OF PROGRESS BAR -->
+
+
+    <div id="h1">
     <h1>  Select Your Ingredients!</h1>
     </div>
+    <br> <br>
     <!-- This is the fruit section -->
     <form method="post" name="items" action="/restrictions">
       <div class="Page_container">
-        <div class="Fruits">
-          <h3>Fruits</h3>
-          <div class="container">
-            <div id="items1">
+        <div class="accordion_Fruits" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h3>Fruits</h3>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="container">
+                <div id="items1">
 
               <input type="Checkbox" name="apples"> Apples</input>
               <br>
@@ -70,58 +241,64 @@
 
             </div>
         </div>
+      </div>
+    </div>
+
+
         <br>
 <!-- This is the Vegetable section -->
-<ul class="bubbles">
-  <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
-  <li><img id="spatula" src="https://webstockreview.net/images/clipart-science-spatula-16.png"></li>
-  <li><img id="spoon" src="http://pngimg.com/uploads/spoon/spoon_PNG3050.png"</li>
-  <li><img id="Whisk" src="https://i.dlpng.com/static/png/3944482_thumb.png"</li>
-  <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
-</ul>
-        <div class="Vegetables">
-          <h3>Vegetables</h3>
-          <div class="container">
-            <div id="items1">
-
-              <input type="Checkbox" name="asparagus"> Asparagus</input>
-              <br>
-              <input type="Checkbox" name="celery"> Celery</input>
-              <br>
-              <input type="Checkbox" name"broccoli"> Broccoli</input>
-            <br>
-              <input type="checkbox" name="cauliflower"> Cauliflower</input>
-            <br>
-              <input type="checkbox" name="corn"> Corn</input>
-            <br>
+          <div class="accordion_Vegetables" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h3>Vegetables</h3>
+                  </button>
               </div>
 
-              <div id="items2">
-                <input type="checkbox" name="lettuce"> Lettuce</input>
-              <br>
-                <input type="checkbox" name="cabbage"> Cabbage</input>
-              <br>
-                <input type="checkbox" name="carrots"> Carrots</input>
-              <br>
-                <input type="checkbox" name="onions"> Onions</input>
-              <br>
-                <input type="checkbox" name="spinach"> Spinach</input>
-              </div>
+              <div id="collapseTwo" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="container">
+                  <div id="items1">
 
-              <div id="items3">
-                <input type="checkbox" name="tomotoes"> Tomotoes</input>
-              <br>
-                <input type="checkbox" name="potatoes"> Potatoes</input>
-              <br>
-                <input type="checkbox" name="garlic"> Garlic</input>
-              <br>
-                <input type="checkbox" name="olives"> Olives</input>
-              <br>
-                <input type="checkbox" name="raddish"> Raddish</input>
-              </div>
+                    <input type="Checkbox" name="asparagus"> Asparagus</input>
+                    <br>
+                    <input type="Checkbox" name="celery"> Celery</input>
+                    <br>
+                    <input type="Checkbox" name="broccoli"> Broccoli</input>
+                  <br>
+                    <input type="checkbox" name="cauliflower"> Cauliflower</input>
+                  <br>
+                    <input type="checkbox" name="corn"> Corn</input>
+                  <br>
+                    </div>
+
+                    <div id="items2">
+                      <input type="checkbox" name="lettuce"> Lettuce</input>
+                    <br>
+                      <input type="checkbox" name="cabbage"> Cabbage</input>
+                    <br>
+                      <input type="checkbox" name="carrots"> Carrots</input>
+                    <br>
+                      <input type="checkbox" name="onions"> Onions</input>
+                    <br>
+                      <input type="checkbox" name="spinach"> Spinach</input>
+                    </div>
+
+                    <div id="items3">
+                      <input type="checkbox" name="tomotoes"> Tomotoes</input>
+                    <br>
+                      <input type="checkbox" name="potatoes"> Potatoes</input>
+                    <br>
+                      <input type="checkbox" name="garlic"> Garlic</input>
+                    <br>
+                      <input type="checkbox" name="olives"> Olives</input>
+                    <br>
+                      <input type="checkbox" name="raddish"> Raddish</input>
+                    </div>
 
             </div>
+          </div>
         </div>
+      </div>
         <br>
 <!-- This is the meat section -->
 <ul class="bubbles">
@@ -131,102 +308,133 @@
   <li><img id="Whisk" src="https://i.dlpng.com/static/png/3944482_thumb.png"</li>
   <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
 </ul>
-        <div class="Meats">
+
+<div class="accordion_Meats" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
           <h3>Meats</h3>
-            <div class="container">
-              <div id="items1">
+        </button>
+    </div>
 
-                <input type="Checkbox" name="beef"> Beef</input>
-                <br>
-                <input type="Checkbox" name="chicken"> Chicken</input>
-                <br>
-                <input type="Checkbox" name="bacon"> Bacon</input>
-                <br>
-                <input type="checkbox" name="pork"> Pork</input>
-                <br>
-                <input type="checkbox" name="ham"> Ham</input>
-                <br>
-            </div>
+    <div id="collapseThree" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="container">
+        <div id="items1">
 
-              <div id="items2">
-                <input type="checkbox" name="lamb"> Lamb</input>
-                <br>
-                <input type="checkbox" name="turkey"> Turkey</input>
-                <br>
-                <input type="checkbox" name="sausage"> Sausage</input>
-                <br>
-                <input type="checkbox" name="duck"> Duck</input>
-                <br>
-                <input type="checkbox" name="goose"> Goose</input>
-             </div>
-
-             <div id="items3">
-                <input type="checkbox" name="rabbit"> Rabbit</input>
-                <br>
-                <input type="checkbox" name="salmon"> Salmon</input>
-                <br>
-                <input type="checkbox" name="fish"> Fish</input>
-                <br>
-                <input type="checkbox" name="tuna"> Tuna</input>
-                <br>
-                <input type="checkbox" name="salami"> Salami</input>
-            </div>
-
-          </div>
+          <input type="Checkbox" name="beef"> Beef</input>
+          <br>
+          <input type="Checkbox" name="chicken"> Chicken</input>
+          <br>
+          <input type="Checkbox" name="bacon"> Bacon</input>
+          <br>
+          <input type="checkbox" name="pork"> Pork</input>
+          <br>
+          <input type="checkbox" name="ham"> Ham</input>
+          <br>
       </div>
+
+        <div id="items2">
+          <input type="checkbox" name="lamb"> Lamb</input>
+          <br>
+          <input type="checkbox" name="turkey"> Turkey</input>
+          <br>
+          <input type="checkbox" name="sausage"> Sausage</input>
+          <br>
+          <input type="checkbox" name="duck"> Duck</input>
+          <br>
+          <input type="checkbox" name="goose"> Goose</input>
+       </div>
+
+       <div id="items3">
+          <input type="checkbox" name="rabbit"> Rabbit</input>
+          <br>
+          <input type="checkbox" name="salmon"> Salmon</input>
+          <br>
+          <input type="checkbox" name="fish"> Fish</input>
+          <br>
+          <input type="checkbox" name="tuna"> Tuna</input>
+          <br>
+          <input type="checkbox" name="salami"> Salami</input>
+       </div>
+
+     </div>
+   </div>
+ </div>
+  </div>
+</div>
+
 <!-- This is the dairy section -->
-      <br><br>
-      <div class="Dairy">
-        <h3>Dairy</h3>
-          <div class="container">
-            <div id="items1">
-              <input type="Checkbox" name="milk"> Milk</input>
-              <br>
-              <input type="Checkbox" name="cheese"> Cheese</input>
-              <br>
-              <input type="Checkbox" name="yogurt"> Yogurt</input>
-              <br>
-              <input type="checkbox" name="butter"> Butter</input>
-              <br>
-              <input type="checkbox" name="icecream"> Ice cream</input>
-              <br>
+      <br><br><br>
+            <div class="accordion_Dairy" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                      <h3>Dairy</h3>
+                    </button>
+                </div>
+
+                <div id="collapseFour" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="container">
+                      <div id="items1">
+                        <input type="Checkbox" name="milk"> Milk</input>
+                        <br>
+                        <input type="Checkbox" name="cheese"> Cheese</input>
+                        <br>
+                        <input type="Checkbox" name="yogurt"> Yogurt</input>
+                        <br>
+                        <input type="checkbox" name="butter"> Butter</input>
+                        <br>
+                        <input type="checkbox" name="icecream"> Ice cream</input>
+                        <br>
+
           </div>
-          <div id="items2">
-            <!-- <input type="checkbox"> Sour Cream</input>
-            <br>
-            <input type="checkbox"> Cream Cheese</input>
-            <br>
-            <input type="checkbox"> Whip Cream</input>
-            <br>
-            <input type="checkbox"> Condensed Milk</input>
-            <br>
-            <input type="checkbox"> Cheddar Cheese</input> -->
-         </div>
         </div>
       </div>
+    </div>
+  </div>
+
+
 <!-- This is the legumes section -->
-      <div class="Grains">
-        <h3>Grains</h3>
-          <div class="container">
-            <div id="items1">
-              <input type="Checkbox" name="oats"> Oats</input>
-              <br>
-              <input type="Checkbox" name="wheat"> Wheat</input>
-              <br>
-              <input type="Checkbox" name="rice"> Rice</input>
-              <br>
-              <input type="checkbox" name="bread"> Bread</input>
-              <br>
-              <input type="checkbox" name="pasta"> Pasta</input>
-              <br>
-          </div>
-          </div>
-      </div>
+<div class="accordion_Grains" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+          <h3>Grains </h3>
+        </button>
+    </div>
+
+    <div id="collapseFive" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="container">
+          <div id="items1">
+            <input type="Checkbox" name="oats"> Oats</input>
+            <br>
+            <input type="Checkbox" name="wheat"> Wheat</input>
+            <br>
+            <input type="Checkbox" name="rice"> Rice</input>
+            <br>
+            <input type="checkbox" name="bread"> Bread</input>
+            <br>
+            <input type="checkbox" name="pasta"> Pasta</input>
+            <br>
+
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
       <br><br>
       <!-- This is the common section -->
-      <div class="Condiments">
-        <h3>Condiments and Spices</h3>
-          <div class="container">
+      <div class="accordion_Condiments" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                <h3>Condiments & Spices</h3>
+              </button>
+          </div>
+
+          <div id="collapseSix" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="container">
               <div id="items1">
               <input type="Checkbox" name="salt"> Salt</input>
               <br>
@@ -261,28 +469,27 @@
               <br>
               <input type="checkbox" name="rice"> Rice</input>
               <br>
-              <input type="checkbox" name"bakingpowder"> Baking Powder</input>
+              <input type="checkbox" name="bakingpowder"> Baking Powder</input>
           </div>
 
         </div>
       </div>
+    </div>
+  </div>
       <br>
       <!-- <h4>What Else is in Your Kitchen?</h4> -->
         <!-- <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
         </textarea>
         <input type="submit" value="Next" id="next"> -->
 
-
-<!-- autocomplete entry for what else is in your kitchen -->
-<div class="autocomplete_ingredients">
-  <!-- <h3>Condiments and Spices</h3> -->
-    <div class="container">
-        <div class="ui-widget">
-          <label for="tags">What else is in your kitchen?: </label>
-          <input id="tags" size="50">
-        </div>
-    </div>
+<!-- START of autocomplete checkbox -->
+<div class="ui-widget">
+  <label for="tags">What else is in your kitchen?: </label>
+  <input id="tags">
 </div>
+<!-- end of code for autocomplete checkbox -->
+
+
 
 <br>
 <br><br><br><br>
@@ -290,14 +497,81 @@
   <input type="submit" value="Next" id="next">
 </form>
 
-<br><br>
-<ul class="bubbles">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+
+
+
+
+<!-- <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <h3>Condiments</h3>
+        </button>
+    </div>
+
+    <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="container">
+        <div id="items1">
+        <input type="Checkbox" name="salt"> Salt</input>
+        <br>
+        <input type="Checkbox" name="pepper"> Pepper</input>
+        <br>
+        <input type="Checkbox" name="flour"> Flour</input>
+        <br>
+        <input type="checkbox" name="oliveoil"> Olive Oil</input>
+        <br>
+        <input type="checkbox" name="mayonnaise"> Mayonnaise</input>
+        <br>
+      </div>
+
+      <div id="items2">
+        <input type="checkbox" name="ketchup"> Ketchup</input>
+        <br>
+        <input type="checkbox" name="sugar"> Sugar</input>
+        <br>
+        <input type="checkbox" name="cornstarch"> Cornstarch</input>
+        <br>
+        <input type="checkbox" name="honey"> Honey</input>
+        <br>
+        <input type="checkbox" name="vinegar"> Vinegar</input>
+     </div>
+
+     <div id="items3">
+        <input type="checkbox" name="vegetableoil"> Vegetable Oil</input>
+        <br>
+        <input type="checkbox" name="yeast"> Yeast</input>
+        <br>
+        <input type="checkbox" name="breadcrumbs"> Bread Crumbs</input>
+        <br>
+        <input type="checkbox" name="rice"> Rice</input>
+        <br>
+        <input type="checkbox" name="bakingpowder"> Baking Powder</input>
+    </div>
+
+
+
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="accordion" id="accordionExample">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> -->
+<!-- </button> -->
+
+<!-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample"> -->
 
 
   </body>

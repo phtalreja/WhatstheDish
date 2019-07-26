@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="styles/restrictions_styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src ="scripts/progress_bar.js"></script>
 <!-- javascript for autocomplete function https://jqueryui.com/autocomplete/#default -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
     <script src ="scripts/autocomplete.js"></script>
@@ -14,12 +15,170 @@
 
   </head>
   <body>
+
+    <!-- PROGRESS BAR CODE  -->
+
+      <div class="md-stepper-horizontal orange">
+          <div class="md-step active">
+            <div class="md-step-circle"><span>1</span></div>
+            <div class="md-step-title">Choose Your Ingredients</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+          <div class="md-step active">
+            <div class="md-step-circle"><span>2</span></div>
+            <div class="md-step-title">Select Your Preferences</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+          <div class="md-step">
+            <div class="md-step-circle"><span>3</span></div>
+            <div class="md-step-title">Get Your Recipes</div>
+            <div class="md-step-bar-left"></div>
+            <div class="md-step-bar-right"></div>
+          </div>
+        </div>
+
+        <style>
+
+          html {
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            -ms-font-smoothing: antialiased !important;
+          }
+          body {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            color: #555555;
+          }
+          .md-stepper-horizontal {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.5);
+          }
+          .md-stepper-horizontal .md-step {
+            display: table-cell;
+            position: relative;
+            padding: 24px;
+          }
+          .md-stepper-horizontal .md-step:hover,
+          .md-stepper-horizontal .md-step:active {
+            background-color: rgba(0, 0, 0, 0.04);
+          }
+          .md-stepper-horizontal .md-step:active {
+            border-radius: 15% / 75%;
+          }
+          .md-stepper-horizontal .md-step:first-child:active {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .md-stepper-horizontal .md-step:last-child:active {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md-stepper-horizontal .md-step:hover .md-step-circle {
+            background-color: #757575;
+          }
+          .md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+          .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+            display: none;
+          }
+          .md-stepper-horizontal .md-step .md-step-circle {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: #999999;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+          }
+          .md-stepper-horizontal.green .md-step.active .md-step-circle {
+            background-color: #00ae4d;
+          }
+          .md-stepper-horizontal.orange .md-step.active .md-step-circle {
+            background-color: #f96302;
+          }
+          .md-stepper-horizontal .md-step.active .md-step-circle {
+            background-color: rgb(33, 150, 243);
+          }
+          .md-stepper-horizontal .md-step.done .md-step-circle:before {
+            font-family: "FontAwesome";
+            font-weight: 100;
+            content: "\f00c";
+          }
+          .md-stepper-horizontal .md-step.done .md-step-circle *,
+          .md-stepper-horizontal .md-step.editable .md-step-circle * {
+            display: none;
+          }
+          .md-stepper-horizontal .md-step.editable .md-step-circle {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+          }
+          .md-stepper-horizontal .md-step.editable .md-step-circle:before {
+            font-family: "FontAwesome";
+            font-weight: 100;
+            content: "\f040";
+          }
+          .md-stepper-horizontal .md-step .md-step-title {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .md-stepper-horizontal .md-step .md-step-title,
+          .md-stepper-horizontal .md-step .md-step-optional {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.26);
+          }
+          .md-stepper-horizontal .md-step.active .md-step-title {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.87);
+          }
+          .md-stepper-horizontal .md-step.active.done .md-step-title,
+          .md-stepper-horizontal .md-step.active.editable .md-step-title {
+            font-weight: 600;
+          }
+          .md-stepper-horizontal .md-step .md-step-optional {
+            font-size: 12px;
+          }
+          .md-stepper-horizontal .md-step.active .md-step-optional {
+            color: rgba(0, 0, 0, 0.54);
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-left,
+          .md-stepper-horizontal .md-step .md-step-bar-right {
+            position: absolute;
+            top: 36px;
+            height: 1px;
+            border-top: 1px solid #dddddd;
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-right {
+            right: 0;
+            left: 50%;
+            margin-left: 20px;
+          }
+          .md-stepper-horizontal .md-step .md-step-bar-left {
+            left: 0;
+            right: 50%;
+            margin-right: 20px;
+          }
+
+
+        </style>
+    <!-- END OF PROGRESS BAR -->
+
+    
     <h1>Select Your Specifications</h1>
     <form method="post" action="/recipes">
         <div class="Restrictions">
           <div id="items1">
             <h3>Allergies</h3>
-                <input type="Checkbox" name="treenuts">Tree Nuts</input>
+                <!-- <input type="Checkbox" name="treenuts">Tree Nuts</input>
                 <br>
                 <input type="Checkbox" name="peanuts">Peanuts</input>
                 <br>
@@ -40,7 +199,65 @@
                 <input type="Checkbox" name="banana">Banana</input>
                 <br>
                 <input type="Checkbox" name="avocado">Avocado</input>
-                <br>
+                <br> -->
+
+                <div id="restriction_icons" width="100%" height="50%" class="container">
+                  <figure>
+                      <img src="allergy_icons/tree_nuts.png" width="70px" height="70px" />
+                      <!-- <figcaption>Tree Nuts</figcaption> -->
+                      <input type="Checkbox" name="treenuts">Tree Nuts</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/peanuts.png" width="70px" height="70px" id="middle">
+                      <!-- <figcaption>Peanuts</figcaption> -->
+                      <input type="Checkbox" name="peanuts">Peanuts</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/shellfish.png" width="70px" height="70px">
+                      <!-- <figcaption>Shellfish</figcaption> -->
+                      <input type="Checkbox" name="shellfish">Shellfish</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/wheat.png" width="70px" height="70px">
+                      <!-- <figcaption>Wheat</figcaption> -->
+                      <input type="checkbox" name="wheat">Wheat</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/soy.png" width="70px" height="70px">
+                      <!-- <figcaption>Soy</figcaption> -->
+                      <input type="Checkbox" name="soy">Soy</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/fish.png" width="70px" height="70px">
+                      <!-- <figcaption>Fish</figcaption> -->
+                      <input type="Checkbox" name="fish">Fish</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/eggs.png" width="70px" height="70px">
+                      <!-- <figcaption>Eggs</figcaption> -->
+                      <input type="Checkbox" name="eggs">Eggs</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/sesame.png" width="70px" height="70px">
+                      <!-- <figcaption>Sesame</figcaption> -->
+                      <input type="Checkbox" name="sesame">Sesame</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/kiwi.png" width="70px" height="70px">
+                      <!-- <figcaption>Kiwi</figcaption> -->
+                      <input type="Checkbox" name="kiwi">Kiwi</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/banana.png" width="70px" height="70px">
+                      <!-- <figcaption>Banana</figcaption> -->
+                      <input type="Checkbox" name="banana">Banana</input>
+                  </figure>
+                  <figure>
+                      <img src="allergy_icons/avocado.png" width="70px" height="70px">
+                      <!-- <figcaption>Avocado</figcaption> -->
+                      <input type="Checkbox" name="avocado">Avocado</input>
+                  </figure>
+                </div>
 
     <!-- autocomplete checkbox -->
     <div class="ui-widget">
