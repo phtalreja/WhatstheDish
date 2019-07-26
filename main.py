@@ -99,8 +99,11 @@ class RecipesHandler(webapp2.RequestHandler):
             template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
             template_vars["cookTimes"].append(as_json2["readyInMinutes"])
             template_vars["directions"].append(as_json2["instructions"])
-            template_vars["missing"].append(as_json["missedIngredients"])
-
+            w = len(x["missedIngredients"])-1
+            list = []
+            while w>0:
+                template_vars["missing"].append(x["missedIngredients"][w]["name"])
+                w-=1
             #Check this part
             i = 0
             while i < len(as_json2["extendedIngredients"]):
@@ -124,11 +127,13 @@ class ChoosenRecipeHandler(webapp2.RequestHandler):
             "content":"",
             "ingredients":"",
             "image":"",
+            "missing":"",
         }
         template_varsAgain["title"] = self.request.get("title")
         template_varsAgain["content"] = self.request.get("content")
         template_varsAgain["ingredients"] = self.request.get("ingredients")
         template_varsAgain["image"]=self.request.get("image")
+        template_varsAgain["missing"]=self.request.get("missing")
         self.response.write(theReceipe_template.render(template_varsAgain))
         #self.response.write(theReceipe_template.render(template_varsAgain))
 
