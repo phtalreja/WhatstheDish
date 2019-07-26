@@ -2,12 +2,15 @@
     text-align: center;
     margin-top: 40px;
     z-index: 1;
-    margin-left: 12%;
+    margin-left: 10%;
     margin-right: 0%;
     margin-bottom: 1%;
     font-size: 30px;
     color: #595656;
     font-family: 'Vollkorn', serif;
+  }
+  form{
+    height: 75%;
   }
 
 h3{
@@ -34,16 +37,7 @@ h4{
     word-spacing: 1.5px;
     z-index: 1;
   }
-  textarea{
-    width: 525px;
-    font-size: 18px;
-    z-index: 1;
-    height: 170px;
-    grid-column: 2;
-    grid-row: 3;
-    margin-top: 100px;
-    margin-left: 75px;
-  }
+
   label {
     font-size: 25px;
     color: #595656;
@@ -52,12 +46,10 @@ h4{
 .Page_container{
   display: grid;
   grid-column: auto;
-  grid-row: 3;
   width: auto;
-  height:auto;
   padding: 40px 40px 40px 40px;
   grid-template-rows: 300px 350px 300px;
-  margin: 0% 25% 10% 25%;
+  margin: 0% 23% -25% 27%;
 
 }
 
@@ -72,6 +64,7 @@ h4{
   border: 8px outset #F2D0D3;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
+  margin-top: -10%;
   margin-left: 75px;
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
@@ -190,7 +183,7 @@ h4{
   border: 8px outset #F2D0D3;
   margin-left: 75px;
   margin-top: 4%;
-  margin-bottom: 15px;
+  margin-bottom: 0%;
   /* margin: 10px 485px 0px 485px; */
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
@@ -235,6 +228,7 @@ h4{
   z-index: 1;
   grid-column: 1;
   grid-row: 8;
+  margin-bottom: -5%;
 }
 #fork{
   opacity:0.1px;
@@ -331,7 +325,7 @@ h4{
     opacity: 0.2;
 }
 
-@-webkit-keyframes   square {
+@-webkit-keyframes  square {
     0% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -353,5 +347,7 @@ h4{
     }
 }
 body{
-  background-color: #F2F0F1;z-index:0;
+  background-color: white;z-index:0;
+  margin-bottom: 0%;
+  #F2F0F1
 }
