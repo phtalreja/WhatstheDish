@@ -11,12 +11,16 @@
     text-align: center;
     margin-top: 40px;
     z-index: 1;
-    margin-left: 9%;
+    width: 70%;
+    margin-left: 17.5%;
     margin-right: -18%;
     margin-bottom: 1%;
     font-size: 30px;
     color: #595656;
     font-family: 'Vollkorn', serif;
+  }
+  label{
+    font-size: 25px;
   }
   form{
     height: 75%;
@@ -48,7 +52,7 @@ h4{
   }
 
   label {
-    font-size: 25px;
+    font-size: 30px;
     color: #595656;
     font-family: 'Vollkorn', serif;
   }
@@ -56,9 +60,9 @@ h4{
   display: grid;
   grid-column: auto;
   grid-row: auto auto auto auto auto auto;
-  width: 100%;
-  margin-top: -7%;
-  margin-left: 29.5%;
+  width: 70%;
+  margin-top: -5%;
+  margin-left: 25%;
   margin-bottom: -24.5%;
 
 }
@@ -66,7 +70,7 @@ h4{
 .accordion_Fruits {
   grid-column: 1;
   grid-row: 1;
-  width: 60%;
+  width: 65%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
@@ -84,16 +88,16 @@ h4{
 .accordion_Vegetables {
   grid-column: 1;
   grid-row: 2;
-  width: 60%;
+  width: 65%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
+  border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
   margin-top: 1%;
   margin-left: 75px;
-  box-shadow: 10px 10px #F2BBC5;
+  box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -102,16 +106,16 @@ h4{
 .accordion_Meats{
   grid-column: 1;
   grid-row: 3;
-  width: 60%;
+  width: 65%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
+  border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
   margin-top: 1%;
   margin-left: 75px;
-  box-shadow: 10px 10px #F2BBC5;
+  box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -119,16 +123,16 @@ h4{
 .accordion_Condiments{
   grid-column: 1;
   grid-row: 5;
-  width: 60%;
+  width: 46%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
+  border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
   margin-top: -2%;
-  margin-left: 35%;
-  box-shadow: 10px 10px #F2BBC5;
+  margin-left: 30%;
+  box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -136,18 +140,18 @@ h4{
 .accordion_Dairy{
   grid-column: 1;
   grid-row: 4;
-  width: 25%;
+  width: 20%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
+  border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
   margin-top: 16%;
-  margin-left: 35%;
+  margin-left: 30%;
   margin-right: 10%;
 
-  box-shadow: 10px 10px #F2BBC5;
+  box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -156,16 +160,16 @@ h4{
 .accordion_Grains {
   grid-column: 1;
   grid-row: 4;
-  width: 25%;
+  width: 20%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
+  border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
   margin-top: -12%;
-  margin-left: 70%;
-  box-shadow: 10px 10px  #F2BBC5;
+  margin-left: 56%;
+  box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -173,17 +177,18 @@ h4{
 }
 
 
-.autocomplete_ingredients {
+.ui-widget {
   grid-column: 1;
   grid-row: 6;
-  width: 555px;
-  padding: 0px 0px 15px 15px;
+  height: 10%;
+  width: 540px;
+  padding: 10px 0px 15px 15px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   -moz-border-radius: 40px 40px 40px 40px;
   -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px #F8F8FF;
-  margin-left: 35%;
+  margin-left: 30%;
   margin-top: 1%;
   margin-bottom: 0%;
   /* margin: 10px 485px 0px 485px; */
@@ -201,6 +206,7 @@ h4{
   width: auto;
   z-index:1;
 }
+
 
 
 #items1{
@@ -232,9 +238,9 @@ h4{
   z-index: 1;
   grid-column: 1;
   grid-row: 8;
-  margin-top: -12.3%;
-  margin-bottom: 49.5%;
-  margin-right: 6%;
+  margin-top: -12.9%;
+  margin-bottom: 50%;
+  margin-right: 24%;
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0 0 20px #DCDCDC;
 }
@@ -257,6 +263,9 @@ h4{
   opacity:0.1px;
   width: 30px;
   height: 80px;
+}
+#tags{
+  width: 80%;
 }
 .bubbles {
     top: 0;
@@ -354,8 +363,131 @@ h4{
         transform: translateY(-1080px) rotate(630deg);
     }
 }
-body{
-  background-color: white;z-index:0;
-  margin-bottom: 0%;
-  #F2F0F1
+html {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -ms-font-smoothing: antialiased !important;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #555555;
+  background-color: white;
+
+}
+.md-stepper-horizontal {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.5);
+}
+.md-stepper-horizontal .md-step {
+  display: table-cell;
+  position: relative;
+  padding: 24px;
+}
+.md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.md-stepper-horizontal .md-step:active {
+  border-radius: 15% / 75%;
+}
+.md-stepper-horizontal .md-step:first-child:active {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.md-stepper-horizontal .md-step:last-child:active {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.md-stepper-horizontal .md-step:hover .md-step-circle {
+  background-color: #757575;
+}
+.md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+.md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+  display: none;
+}
+.md-stepper-horizontal .md-step .md-step-circle {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #999999;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.md-stepper-horizontal.green .md-step.active .md-step-circle {
+  background-color: #00ae4d;
+}
+.md-stepper-horizontal.orange .md-step.active .md-step-circle {
+  background-color: #f96302;
+}
+.md-stepper-horizontal .md-step.active .md-step-circle {
+  background-color: rgb(33, 150, 243);
+}
+.md-stepper-horizontal .md-step.done .md-step-circle:before {
+  font-family: "FontAwesome";
+  font-weight: 100;
+  content: "\f00c";
+}
+.md-stepper-horizontal .md-step.done .md-step-circle *,
+.md-stepper-horizontal .md-step.editable .md-step-circle * {
+  display: none;
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle:before {
+  font-family: "FontAwesome";
+  font-weight: 100;
+  content: "\f040";
+}
+.md-stepper-horizontal .md-step .md-step-title {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.md-stepper-horizontal .md-step .md-step-title,
+.md-stepper-horizontal .md-step .md-step-optional {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.26);
+}
+.md-stepper-horizontal .md-step.active .md-step-title {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+}
+.md-stepper-horizontal .md-step.active.done .md-step-title,
+.md-stepper-horizontal .md-step.active.editable .md-step-title {
+  font-weight: 600;
+}
+.md-stepper-horizontal .md-step .md-step-optional {
+  font-size: 12px;
+}
+.md-stepper-horizontal .md-step.active .md-step-optional {
+  color: rgba(0, 0, 0, 0.54);
+}
+.md-stepper-horizontal .md-step .md-step-bar-left,
+.md-stepper-horizontal .md-step .md-step-bar-right {
+  position: absolute;
+  top: 36px;
+  height: 1px;
+  border-top: 1px solid #dddddd;
+}
+.md-stepper-horizontal .md-step .md-step-bar-right {
+  right: 0;
+  left: 50%;
+  margin-left: 20px;
+}
+.md-stepper-horizontal .md-step .md-step-bar-left {
+  left: 0;
+  right: 50%;
+  margin-right: 20px;
 }
