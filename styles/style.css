@@ -167,7 +167,7 @@ h4{
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
-  margin-top: -12%;
+  margin-top: -11%;
   margin-left: 56%;
   box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
@@ -264,6 +264,19 @@ h4{
   width: 30px;
   height: 80px;
 }
+
+#apple_icon{
+  height: 30px;
+  margin-top:-8%;
+  margin-left: 5%;
+}
+#meat_icon{
+  height: 30px;
+  margin-top:-2%;
+  margin-left: 5%;
+}
+
+
 #tags{
   width: 80%;
 }
