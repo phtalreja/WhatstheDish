@@ -8,12 +8,64 @@
 <!-- javascript for autocomplete function https://jqueryui.com/autocomplete/#default -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
     <script src ="scripts/autocomplete.js"></script>
+    <script src ="scripts/progress_bar.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- above is jquery stuff I imported for the autocomplete to work -->
 
   </head>
   <body>
+    <!-- START OF progress bar code -->
+    <!-- Stepper CSS -->
+    <link href="css/addons-pro/steppers.css" rel="stylesheet">
+    <!-- Stepper CSS - minified-->
+    <link href="css/addons-pro/steppers.min.css" rel="stylesheet">
+
+    <!-- Stepper JavaScript -->
+    <script type="text/javascript" src="js/addons-pro/stepper.js"></script>
+    <!-- Stepper JavaScript - minified -->
+    <script type="text/javascript" src="js/addons-pro/stepper.min.js"></script>
+
+    <!-- Horizontal Steppers -->
+<div class="row">
+  <div class="col-md-12">
+
+    <!-- Stepers Wrapper -->
+    <ul class="stepper stepper-horizontal">
+
+      <!-- First Step -->
+      <li class="completed">
+        <a href="#!">
+          <span class="circle">1</span>
+          <span class="label">First step</span>
+        </a>
+      </li>
+
+      <!-- Second Step -->
+      <li class="active">
+        <a href="#!">
+          <span class="circle">2</span>
+          <span class="label">Second step</span>
+        </a>
+      </li>
+
+      <!-- Third Step -->
+      <li class="warning">
+        <a href="#!">
+          <span class="circle"><i class="fas fa-exclamation"></i></span>
+          <span class="label">Third step</span>
+        </a>
+      </li>
+
+    </ul>
+    <!-- /.Stepers Wrapper -->
+
+  </div>
+</div>
+<!-- /.Horizontal Steppers -->
+
+
+    <!-- END OF PROGRESS BAR -->
     <h1>Select Your Specifications</h1>
     <form method="post" action="/recipes">
         <div class="Restrictions">
