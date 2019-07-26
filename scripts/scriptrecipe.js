@@ -6,8 +6,9 @@ function onsubmitClick(i) {
   var content = document.getElementById("card-text" + i).textContent;
   var ingredients = document.getElementById("hidden" + i).textContent;
   var image = document.getElementById("hiddenImage" + i).textContent;
+  var missingIngredients = document.getElementById("hiddenStuff" + i).textContent;
 
-  var url ="/choosenrecipe?title=" + title + "&content=" + content + "&ingredients=" + ingredients +"&image=" + image;
+  var url ="/choosenrecipe?title=" + title + "&content=" + content + "&ingredients=" + ingredients +"&image=" + image + "&missing=" + missingIngredients;
   window.location.href = url;
 
 }
