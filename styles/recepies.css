@@ -1,6 +1,10 @@
 .card {
   margin-left: 40%;
 }
+
 h1 {
   margin-left: 30%;
+  font-size: 45px;
+  color: #595656;
+  font-family: 'Lobster', cursive;
 }
