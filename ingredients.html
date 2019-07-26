@@ -12,6 +12,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src ="scripts/ingredientsscript.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Vollkorn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
   <body>
     <ul class="bubbles">
@@ -21,16 +23,24 @@
       <li><img id="Whisk" src="https://i.dlpng.com/static/png/3944482_thumb.png"</li>
       <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
     </ul>
-    <div id="Select">
+    <div id="h1">
     <h1>  Select Your Ingredients!</h1>
     </div>
+    <br> <br>
     <!-- This is the fruit section -->
     <form method="post" name="items" action="/restrictions">
       <div class="Page_container">
-        <div class="Fruits">
-          <h3>Fruits</h3>
-          <div class="container">
-            <div id="items1">
+        <div class="accordion_Fruits" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <h3>Fruits</h3>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="container">
+                <div id="items1">
 
               <input type="Checkbox" name="apples"> Apples</input>
               <br>
@@ -70,51 +80,64 @@
 
             </div>
         </div>
+      </div>
+    </div>
+
+
         <br>
 <!-- This is the Vegetable section -->
-        <div class="Vegetables">
-          <h3>Vegetables</h3>
-          <div class="container">
-            <div id="items1">
-
-              <input type="Checkbox" name="asparagus"> Asparagus</input>
-              <br>
-              <input type="Checkbox" name="celery"> Celery</input>
-              <br>
-              <input type="Checkbox" name"broccoli"> Broccoli</input>
-            <br>
-              <input type="checkbox" name="cauliflower"> Cauliflower</input>
-            <br>
-              <input type="checkbox" name="corn"> Corn</input>
-            <br>
+          <div class="accordion_Vegetables" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h3>Vegetables</h3>
+                  </button>
               </div>
 
-              <div id="items2">
-                <input type="checkbox" name="lettuce"> Lettuce</input>
-              <br>
-                <input type="checkbox" name="cabbage"> Cabbage</input>
-              <br>
-                <input type="checkbox" name="carrots"> Carrots</input>
-              <br>
-                <input type="checkbox" name="onions"> Onions</input>
-              <br>
-                <input type="checkbox" name="spinach"> Spinach</input>
-              </div>
+              <div id="collapseTwo" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="container">
+                  <div id="items1">
 
-              <div id="items3">
-                <input type="checkbox" name="tomotoes"> Tomotoes</input>
-              <br>
-                <input type="checkbox" name="potatoes"> Potatoes</input>
-              <br>
-                <input type="checkbox" name="garlic"> Garlic</input>
-              <br>
-                <input type="checkbox" name="olives"> Olives</input>
-              <br>
-                <input type="checkbox" name="raddish"> Raddish</input>
-              </div>
+                    <input type="Checkbox" name="asparagus"> Asparagus</input>
+                    <br>
+                    <input type="Checkbox" name="celery"> Celery</input>
+                    <br>
+                    <input type="Checkbox" name="broccoli"> Broccoli</input>
+                  <br>
+                    <input type="checkbox" name="cauliflower"> Cauliflower</input>
+                  <br>
+                    <input type="checkbox" name="corn"> Corn</input>
+                  <br>
+                    </div>
+
+                    <div id="items2">
+                      <input type="checkbox" name="lettuce"> Lettuce</input>
+                    <br>
+                      <input type="checkbox" name="cabbage"> Cabbage</input>
+                    <br>
+                      <input type="checkbox" name="carrots"> Carrots</input>
+                    <br>
+                      <input type="checkbox" name="onions"> Onions</input>
+                    <br>
+                      <input type="checkbox" name="spinach"> Spinach</input>
+                    </div>
+
+                    <div id="items3">
+                      <input type="checkbox" name="tomotoes"> Tomotoes</input>
+                    <br>
+                      <input type="checkbox" name="potatoes"> Potatoes</input>
+                    <br>
+                      <input type="checkbox" name="garlic"> Garlic</input>
+                    <br>
+                      <input type="checkbox" name="olives"> Olives</input>
+                    <br>
+                      <input type="checkbox" name="raddish"> Raddish</input>
+                    </div>
 
             </div>
+          </div>
         </div>
+      </div>
         <br>
 <!-- This is the meat section -->
 <ul class="bubbles">
@@ -124,97 +147,120 @@
   <li><img id="Whisk" src="https://i.dlpng.com/static/png/3944482_thumb.png"</li>
   <li><img id="fork" src="http://www.pngall.com/wp-content/uploads/2016/04/Fork.png"></li>
 </ul>
-        <div class="Meats">
+
+<div class="accordion_Meats" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
           <h3>Meats</h3>
-            <div class="container">
-              <div id="items1">
+        </button>
+    </div>
 
-                <input type="Checkbox" name="beef"> Beef</input>
-                <br>
-                <input type="Checkbox" name="chicken"> Chicken</input>
-                <br>
-                <input type="Checkbox" name="bacon"> Bacon</input>
-                <br>
-                <input type="checkbox" name="pork"> Pork</input>
-                <br>
-                <input type="checkbox" name="ham"> Ham</input>
-                <br>
-            </div>
+    <div id="collapseThree" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="container">
+        <div id="items1">
 
-              <div id="items2">
-                <input type="checkbox" name="lamb"> Lamb</input>
-                <br>
-                <input type="checkbox" name="turkey"> Turkey</input>
-                <br>
-                <input type="checkbox" name="sausage"> Sausage</input>
-                <br>
-                <input type="checkbox" name="duck"> Duck</input>
-                <br>
-                <input type="checkbox" name="goose"> Goose</input>
-             </div>
-
-             <div id="items3">
-                <input type="checkbox" name="rabbit"> Rabbit</input>
-                <br>
-                <input type="checkbox" name="salmon"> Salmon</input>
-                <br>
-                <input type="checkbox" name="fish"> Fish</input>
-                <br>
-                <input type="checkbox" name="tuna"> Tuna</input>
-                <br>
-                <input type="checkbox" name="salami"> Salami</input>
-            </div>
-
-          </div>
+          <input type="Checkbox" name="beef"> Beef</input>
+          <br>
+          <input type="Checkbox" name="chicken"> Chicken</input>
+          <br>
+          <input type="Checkbox" name="bacon"> Bacon</input>
+          <br>
+          <input type="checkbox" name="pork"> Pork</input>
+          <br>
+          <input type="checkbox" name="ham"> Ham</input>
+          <br>
       </div>
+
+        <div id="items2">
+          <input type="checkbox" name="lamb"> Lamb</input>
+          <br>
+          <input type="checkbox" name="turkey"> Turkey</input>
+          <br>
+          <input type="checkbox" name="sausage"> Sausage</input>
+          <br>
+          <input type="checkbox" name="duck"> Duck</input>
+          <br>
+          <input type="checkbox" name="goose"> Goose</input>
+       </div>
+
+       <div id="items3">
+          <input type="checkbox" name="rabbit"> Rabbit</input>
+          <br>
+          <input type="checkbox" name="salmon"> Salmon</input>
+          <br>
+          <input type="checkbox" name="fish"> Fish</input>
+          <br>
+          <input type="checkbox" name="tuna"> Tuna</input>
+          <br>
+          <input type="checkbox" name="salami"> Salami</input>
+       </div>
+
+     </div>
+   </div>
+ </div>
+  </div>
+
 <!-- This is the dairy section -->
       <br><br>
-      <div class="Dairy">
-        <h3>Dairy</h3>
-          <div class="container">
-            <div id="items1">
-              <input type="Checkbox" name="milk"> Milk</input>
-              <br>
-              <input type="Checkbox" name="cheese"> Cheese</input>
-              <br>
-              <input type="Checkbox" name="yogurt"> Yogurt</input>
-              <br>
-              <input type="checkbox" name="butter"> Butter</input>
-              <br>
-              <input type="checkbox" name="icecream"> Ice cream</input>
-              <br>
+            <div class="accordion_Dairy" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                      <h3>Dairy</h3>
+                    </button>
+                </div>
+
+                <div id="collapseFour" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="container">
+                      <div id="items1">
+                        <input type="Checkbox" name="milk"> Milk</input>
+                        <br>
+                        <input type="Checkbox" name="cheese"> Cheese</input>
+                        <br>
+                        <input type="Checkbox" name="yogurt"> Yogurt</input>
+                        <br>
+                        <input type="checkbox" name="butter"> Butter</input>
+                        <br>
+                        <input type="checkbox" name="icecream"> Ice cream</input>
+                        <br>
+
           </div>
-          <div id="items2">
-            <!-- <input type="checkbox"> Sour Cream</input>
-            <br>
-            <input type="checkbox"> Cream Cheese</input>
-            <br>
-            <input type="checkbox"> Whip Cream</input>
-            <br>
-            <input type="checkbox"> Condensed Milk</input>
-            <br>
-            <input type="checkbox"> Cheddar Cheese</input> -->
-         </div>
         </div>
       </div>
+    </div>
+  </div>
+
+
 <!-- This is the legumes section -->
-      <div class="Grains">
-        <h3>Grains</h3>
-          <div class="container">
-            <div id="items1">
-              <input type="Checkbox" name="oats"> Oats</input>
-              <br>
-              <input type="Checkbox" name="wheat"> Wheat</input>
-              <br>
-              <input type="Checkbox" name="rice"> Rice</input>
-              <br>
-              <input type="checkbox" name="bread"> Bread</input>
-              <br>
-              <input type="checkbox" name="pasta"> Pasta</input>
-              <br>
-          </div>
-          </div>
-      </div>
+<div class="accordion_Grains" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+          <h3>Grains </h3>
+        </button>
+    </div>
+
+    <div id="collapseFive" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="container">
+          <div id="items1">
+            <input type="Checkbox" name="oats"> Oats</input>
+            <br>
+            <input type="Checkbox" name="wheat"> Wheat</input>
+            <br>
+            <input type="Checkbox" name="rice"> Rice</input>
+            <br>
+            <input type="checkbox" name="bread"> Bread</input>
+            <br>
+            <input type="checkbox" name="pasta"> Pasta</input>
+            <br>
+            
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
       <br><br>
       <!-- This is the common section -->
       <div class="Condiments">
@@ -282,6 +328,59 @@
   <br>
   <input type="submit" value="Next" id="next">
 </form>
+
+
+
+
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <h3>Grains </h3>
+        </button>
+    </div>
+
+    <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="container">
+        <div class="container">
+          <div id="items1">
+            <input type="Checkbox" name="oats"> Oats</input>
+            <br>
+            <input type="Checkbox" name="wheat"> Wheat</input>
+            <br>
+            <input type="Checkbox" name="rice"> Rice</input>
+            <br>
+            <input type="checkbox" name="bread"> Bread</input>
+            <br>
+            <input type="checkbox" name="pasta"> Pasta</input>
+            <br>
+        </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="accordion" id="accordionExample">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> -->
+<!-- </button> -->
+
+<!-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample"> -->
 
 
   </body>
