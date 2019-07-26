@@ -9,15 +9,15 @@
 
 #h1 {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
     z-index: 1;
     width: 70%;
     margin-left: 17.5%;
     margin-right: -18%;
     margin-bottom: 1%;
-    font-size: 30px;
+    font-size: 45px;
     color: #595656;
-    font-family: 'Vollkorn', serif;
+    font-family: 'Lobster',cursive;
   }
   label{
     font-size: 25px;
