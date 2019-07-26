@@ -1,9 +1,9 @@
-#Select {
+#h1 {
     text-align: center;
     margin-top: 40px;
     z-index: 1;
-    margin-left: 10%;
-    margin-right: 0%;
+    margin-left: 9%;
+    margin-right: -18%;
     margin-bottom: 1%;
     font-size: 30px;
     color: #595656;
@@ -24,7 +24,7 @@ h4{
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px;
-    margin-left: 75px;
+    margin-left: 80px;
     z-index: 1;
     grid-column: 2;
     grid-row: 3;
@@ -46,25 +46,25 @@ h4{
 .Page_container{
   display: grid;
   grid-column: auto;
-  width: auto;
-  padding: 40px 40px 40px 40px;
-  grid-template-rows: 300px 350px 300px;
-  margin: 0% 23% -25% 27%;
+  grid-row: auto auto auto auto auto auto;
+  width: 100%;
+  margin-top: -7%;
+  margin-left: 29.5%;
+  margin-bottom: -24.5%;
 
 }
 
-.Fruits {
+.accordion_Fruits {
   grid-column: 1;
-  width: 525px;
-  padding: 0px 0px 15px 15px;
+  grid-row: 1;
+  width: 60%;
+  padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
   /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
-  margin-top: -10%;
+  margin-top: 4%;
   margin-left: 75px;
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
@@ -72,19 +72,17 @@ h4{
   z-index: 2;
 }
 
-.Vegetables {
+.accordion_Vegetables {
   grid-column: 1;
   grid-row: 2;
-  width: 525px;
-  padding: 0px 0px 15px 15px;
-  height:257px;
+  width: 60%;
+  padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
-  margin-top: 15px;
+  /* margin: 10px 485px 0px 485px; */
   margin-bottom: 15px;
+  margin-top: 1%;
   margin-left: 75px;
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
@@ -92,81 +90,74 @@ h4{
   z-index: 2;
 }
 
-.Meats{
+.accordion_Meats{
   grid-column: 1;
   grid-row: 3;
-  width: 525px;
-  height: 265px;
-  padding: 0px 0px 15px 15px;
+  width: 60%;
+  padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
-  margin-left: 75px;
-  margin-top: -15px;
-  box-shadow: 10px 10px #F2BBC5;
-  /* border-radius: 10px 10px 10px 10px; */
-  font-size: 20px;
-  z-index: 2;
-}
-.Condiments{
-  grid-column: 1;
-  grid-row: 4;
-  width: 525px;
-  padding: 0px 0px 15px 15px;
-  /* border: 2px outset; */
-  border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
-  border: 8px outset #F2D0D3;
-  margin-left: 75px;
-  margin-bottom: 15px;
   /* margin: 10px 485px 0px 485px; */
+  margin-bottom: 15px;
+  margin-top: 1%;
+  margin-left: 75px;
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
 }
-.Dairy{
+.accordion_Condiments{
   grid-column: 1;
   grid-row: 5;
-  width: 200px;
-  height:250px;
-  padding: 0px 0px 15px 15px;
+  width: 60%;
+  padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
-  margin: 10px;
-  margin-left: 75px;
   /* margin: 10px 485px 0px 485px; */
+  margin-bottom: 15px;
+  margin-top: 1%;
+  margin-left: 75px;
+  box-shadow: 10px 10px #F2BBC5;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
+}
+.accordion_Dairy{
+  grid-column: 1;
+  grid-row: 4;
+  width: 25%;
+  padding: 20px 20px 40px 20px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  border: 8px outset #F2D0D3;
+  /* margin: 10px 485px 0px 485px; */
+  margin-bottom: 15px;
+  margin-top: 1%;
+  margin-left: 75px;
   box-shadow: 10px 10px #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
 
 }
-.Grains {
+.accordion_Grains {
   grid-column: 1;
-  grid-row: 5;
-  width: 200px;
-  height:250px;
-  padding: 0px 0px 15px 15px;
+  grid-row: 4;
+  width: 25%;
+  padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
-  -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
-  margin: 10px;
-  margin-left: 400px;
   /* margin: 10px 485px 0px 485px; */
-  box-shadow: 10px 10px #F2BBC5;
+  margin-bottom: 15px;
+  margin-top: 1%;
+  margin-left: 40%;
+  box-shadow: 10px 10px  #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
-  float: right;
 
 }
 
@@ -174,7 +165,7 @@ h4{
 .autocomplete_ingredients {
   grid-column: 1;
   grid-row: 6;
-  width: 525px;
+  width: 555px;
   padding: 0px 0px 15px 15px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
@@ -182,10 +173,10 @@ h4{
   -webkit-border-radius: 40px 40px 40px 40px;
   border: 8px outset #F2D0D3;
   margin-left: 75px;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-bottom: 0%;
   /* margin: 10px 485px 0px 485px; */
-  box-shadow: 10px 10px #F2BBC5;
+  box-shadow: 10px 10px   #F2BBC5;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -197,6 +188,22 @@ h4{
   grid-column: auto auto auto;
   width: auto;
   z-index:1;
+}
+.accordion {
+  grid-column: 1;
+  width: 50%;
+  padding: 20px 20px 40px 20px;
+  /* border: 2px outset; */
+  border-radius: 40px 40px 40px 40px;
+  border: 8px outset #F2D0D3;
+  /* margin: 10px 485px 0px 485px; */
+  margin-bottom: 15px;
+  margin-top: -10%;
+  margin-left: 75px;
+  box-shadow: 10px 10px #F2BBC5;
+  /* border-radius: 10px 10px 10px 10px; */
+  font-size: 20px;
+  z-index: 2;
 }
 
 #items1{
@@ -224,11 +231,14 @@ h4{
   float: right;
   margin-left: 78%;
   width:100px;
-  height: 75px;
+  height: 40px;
   z-index: 1;
   grid-column: 1;
   grid-row: 8;
-  margin-bottom: -5%;
+  margin-top: 0%;
+  margin-bottom: 49.5%;
+  margin-right: 5%;
+  border-radius: 5px 5px 5px 5px;
 }
 #fork{
   opacity:0.1px;
