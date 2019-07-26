@@ -254,7 +254,7 @@
             <br>
             <input type="checkbox" name="pasta"> Pasta</input>
             <br>
-            
+
          </div>
        </div>
      </div>
@@ -263,9 +263,16 @@
 
       <br><br>
       <!-- This is the common section -->
-      <div class="Condiments">
-        <h3>Condiments and Spices</h3>
-          <div class="container">
+      <div class="accordion_Condiments" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                <h3>Condiments</h3>
+              </button>
+          </div>
+
+          <div id="collapseSix" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="container">
               <div id="items1">
               <input type="Checkbox" name="salt"> Salt</input>
               <br>
@@ -300,11 +307,13 @@
               <br>
               <input type="checkbox" name="rice"> Rice</input>
               <br>
-              <input type="checkbox" name"bakingpowder"> Baking Powder</input>
+              <input type="checkbox" name="bakingpowder"> Baking Powder</input>
           </div>
 
         </div>
       </div>
+    </div>
+  </div>
       <br>
       <!-- <h4>What Else is in Your Kitchen?</h4> -->
         <!-- <textarea name="More_Ingredients" rows="8" cols="80" placeholder="What's Missing!">
@@ -322,6 +331,7 @@
         </div>
     </div>
 </div>
+</div>
 
 <br>
 <br><br><br><br>
@@ -333,35 +343,58 @@
 
 
 
-<div class="accordion" id="accordionExample">
+<!-- <div class="accordion" id="accordionExample">
   <div class="card">
     <div class="card-header" id="headingOne">
         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h3>Grains </h3>
+          <h3>Condiments</h3>
         </button>
     </div>
 
     <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="container">
-        <div class="container">
-          <div id="items1">
-            <input type="Checkbox" name="oats"> Oats</input>
-            <br>
-            <input type="Checkbox" name="wheat"> Wheat</input>
-            <br>
-            <input type="Checkbox" name="rice"> Rice</input>
-            <br>
-            <input type="checkbox" name="bread"> Bread</input>
-            <br>
-            <input type="checkbox" name="pasta"> Pasta</input>
-            <br>
-        </div>
+        <div id="items1">
+        <input type="Checkbox" name="salt"> Salt</input>
+        <br>
+        <input type="Checkbox" name="pepper"> Pepper</input>
+        <br>
+        <input type="Checkbox" name="flour"> Flour</input>
+        <br>
+        <input type="checkbox" name="oliveoil"> Olive Oil</input>
+        <br>
+        <input type="checkbox" name="mayonnaise"> Mayonnaise</input>
+        <br>
+      </div>
+
+      <div id="items2">
+        <input type="checkbox" name="ketchup"> Ketchup</input>
+        <br>
+        <input type="checkbox" name="sugar"> Sugar</input>
+        <br>
+        <input type="checkbox" name="cornstarch"> Cornstarch</input>
+        <br>
+        <input type="checkbox" name="honey"> Honey</input>
+        <br>
+        <input type="checkbox" name="vinegar"> Vinegar</input>
+     </div>
+
+     <div id="items3">
+        <input type="checkbox" name="vegetableoil"> Vegetable Oil</input>
+        <br>
+        <input type="checkbox" name="yeast"> Yeast</input>
+        <br>
+        <input type="checkbox" name="breadcrumbs"> Bread Crumbs</input>
+        <br>
+        <input type="checkbox" name="rice"> Rice</input>
+        <br>
+        <input type="checkbox" name="bakingpowder"> Baking Powder</input>
+    </div>
 
 
 
     </div>
   </div>
-</div>
+</div> -->
 
 
 
