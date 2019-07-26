@@ -1,13 +1,59 @@
-/* title style */
-/* #title{
-  font-family: 'Vollkorn', serif;
-  text-align: center;
-  font-size: 175px;
-  color: #595655;
-} */
-
 body {
   background-color: white;
+}
+
+/* multiline typewriter https://codepen.io/daviddcarr/pen/XVyQMM */
+/*
+
+.output {
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  color: orange;
+}
+.output h1 {
+  font-size: 30px;
+}
+
+/* Cursor Styling */
+/* .cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: orange;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+h1.cursor::after {
+  height: 24px;
+  width: 13px;
+}
+
+p.cursor::after {
+  height: 13px;
+  width: 6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+/* end of code for multiline typewriter  */
+
+#header{
+  background-color: black;
 }
 
 #stepper {
@@ -16,9 +62,20 @@ body {
   grid-column: auto;
   text-align: center;
 }
+
+figure {
+    display:inline-block;
+}
+
+figcaption {
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+    font-size: 25px;
+}
+
 #middle{
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 h1 {
@@ -38,7 +95,6 @@ p {
   font-size: 175px;
   color: #ffffff;
 }
-
 
 
 /* start of animated button */
