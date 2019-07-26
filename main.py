@@ -107,6 +107,9 @@ class RecipesHandler(webapp2.RequestHandler):
                         index = template_vars["options"].index(y)
                         template_vars["options"].remove(y)
                         template_vars["images"].remove(template_vars["images"][index])
+                        template_vars["percentages"].remove(template_vars["percentages"][index])
+                        template_vars["cookTimes"].remove(template_vars["cookTimes"][index])
+                        template_vars["directions"].remove(template_vars["directions"][index])
                 i+=1
 
         self.response.write(recipes_template.render(template_vars))
