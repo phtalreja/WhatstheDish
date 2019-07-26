@@ -70,6 +70,8 @@ class RecipesHandler(webapp2.RequestHandler):
             "options":[],
             "images":[],
             "percentages":[],
+            "cookTimes": [],
+            "directions":[],
         }
 
         content = response.content
@@ -88,33 +90,42 @@ class RecipesHandler(webapp2.RequestHandler):
             content2 = response2.content
             as_json2 = json.loads(content2)
 
-            #json2 does not parse correctly
-            #print(as_json2["extendedIngredients"][0]["name"])
 
             template_vars["options"].append(x["title"])
             template_vars["images"].append(x["image"])
             usedIngredients = len(x["usedIngredients"])
             missingIngredients = len(x["missedIngredients"])
             template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
+            template_vars["cookTimes"].append(as_json2["readyInMinutes"])
+            template_vars["directions"].append(as_json2["instructions"])
 
-            # for y in userRestrictions:
-            #     for item in as_json2["extendedIngredients"]:
-            #         if y!="on" or y== as_json2["extendedIngredients"]["name"]:
-            #             print("nope")
-            #             print(as_json2["extendedIngredients"]["name"])
-            #         else:
-            #             template_vars["options"].append(x["title"])
-            #             template_vars["images"].append(x["image"])
-            #             usedIngredients = len(x["usedIngredients"])
-            #             missingIngredients = len(x["missedIngredients"])
-            #             template_vars["percentages"].append(100 * float(usedIngredients)/float(missingIngredients))
+            #Check this part
+            i = 0
+            while i < len(as_json2["extendedIngredients"]):
+                for y in userRestrictions:
+                    if y!="on" and y== as_json2["extendedIngredients"][i]["name"]:
+                        index = template_vars["options"].index(y)
+                        template_vars["options"].remove(y)
+                        template_vars["images"].remove(template_vars["images"][index])
+                i+=1
 
         self.response.write(recipes_template.render(template_vars))
 
 class ChoosenRecipeHandler(webapp2.RequestHandler):
     def get(self):
         theReceipe_template = the_jinja_env.get_template("choosenRecipe.html")
-        self.request.get(theReceipe_template.render())        
+        template_varsAgain = {
+            "title":"",
+            "content":"",
+            "ingredients":"",
+            "image":"",
+        }
+        template_varsAgain["title"] = self.request.get("title")
+        template_varsAgain["content"] = self.request.get("content")
+        template_varsAgain["ingredients"] = self.request.get("ingredients")
+        template_varsAgain["image"]=self.request.get("image")
+        self.response.write(theReceipe_template.render(template_varsAgain))
+        #self.response.write(theReceipe_template.render(template_varsAgain))
 
 
 app = webapp2.WSGIApplication ([
