@@ -18,7 +18,7 @@
     <h1>These are the Recipes that Match You!</h1>
     {% for i in range(options|length) %}
       <div class="card" style="width: 18rem;">
-        <img src="{{images[i]}}" class="card-img-top" alt="...">
+        <img src="{{images[i]}}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title" id="card-title{{i}}">{{options[i]}}</h5>
             <p class="card-text" id="card-text{{i}}">{{cookTimes[i]}} <br/> {{percentages[i]}}</p>
