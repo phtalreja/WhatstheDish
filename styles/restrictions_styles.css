@@ -10,13 +10,8 @@
 /* styling for restriction icons (having each item name under the icon picture)*/
 figure {
     display:inline-block;
+    font-family: "FontAwesome";
 }
-
-/* figcaption {
-    text-align: center;
-    font-family: 'Vollkorn', serif;
-    font-size: 25px;
-} */
 
 
 /* styling for the autocomplete is below */
@@ -34,7 +29,7 @@ h1{
     z-index: 1;
     font-size: 45px;
     color: #595656;
-    font-family: 'Vollkorn', serif;
+    font-family: 'Lobster', cursive;
   }
 
 h3{
@@ -43,7 +38,7 @@ h3{
     font-size: 30px;
     z-index: 1;
     color: #595656;
-    font-family: 'Vollkorn', serif;
+    font-family: 'Lobster', cursive;
   }
 
 .Restrictions {
