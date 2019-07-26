@@ -1,9 +1,9 @@
-
-/* multiline typewriter https://codepen.io/daviddcarr/pen/XVyQMM */
-/*
 body {
   background-color: white;
 }
+
+/* multiline typewriter https://codepen.io/daviddcarr/pen/XVyQMM */
+/*
 
 .output {
   text-align: center;
@@ -15,7 +15,7 @@ body {
 }
 
 /* Cursor Styling */
-.cursor::after {
+/* .cursor::after {
   content: '';
   display: inline-block;
   margin-left: 3px;
