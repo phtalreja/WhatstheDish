@@ -145,12 +145,10 @@ h4{
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
-  /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 15px;
-  margin-top: 16%;
+  margin-top: 15%;
   margin-left: 30%;
   margin-right: 10%;
-
+  margin-bottom: 1.5%;
   box-shadow: 0 0 20px #DCDCDC;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
@@ -166,7 +164,7 @@ h4{
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   margin-top: -11%;
   margin-left: 56%;
   box-shadow: 0 0 20px #DCDCDC;
