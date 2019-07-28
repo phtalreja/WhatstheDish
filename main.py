@@ -108,7 +108,7 @@ class RecipesHandler(webapp2.RequestHandler):
             i = 0
             while i < len(as_json2["extendedIngredients"]):
                 for y in userRestrictions:
-                    if y!="on" and y== as_json2["extendedIngredients"][i]["name"]:
+                    if (y!="on" and y== as_json2["extendedIngredients"][i]["name"]) or (y!="on" and y=="vegetarian" and (as_json2["vegetarian"]==false)):
                         index = template_vars["options"].index(y)
                         template_vars["options"].remove(y)
                         template_vars["images"].remove(template_vars["images"][index])
