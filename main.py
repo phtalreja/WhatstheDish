@@ -110,6 +110,8 @@ class RecipesHandler(webapp2.RequestHandler):
                 for y in userRestrictions:
                     if (y!="on" and y== as_json2["extendedIngredients"][i]["name"]) or (y!="on" and y=="vegetarian" and (as_json2["vegetarian"]==false)):
                         index = template_vars["options"].index(y)
+                        print("marker")
+                        print(index)
                         template_vars["options"].remove(y)
                         template_vars["images"].remove(template_vars["images"][index])
                         template_vars["percentages"].remove(template_vars["percentages"][index])
