@@ -26,6 +26,7 @@ h1{
     text-align: center;
     margin-top: 50px;
     display: block;
+    margin-left: 10%;
     z-index: 1;
     font-size: 45px;
     color: #595656;
@@ -44,12 +45,13 @@ h3{
 .Restrictions {
   width: 475px;
   padding: 5px 15px 10px 15px;
-  border: solid grey;
+  border: 8px;
   margin: 15px 500px 0px 500px;
   float:left;
-  border: 2px outset;
   border-radius: 10px 10px 10px 10px;
   font-size: 20px;
+  margin-left: 37%;
+  box-shadow: 0 0 20px #DCDCDC;
 }
 .container{
   display:grid;

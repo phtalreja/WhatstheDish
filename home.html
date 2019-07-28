@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <div class="header">
-      <h1>What's the Dish?<img src="/images/chef.png" height="45px" width="45px"></h1>
+      <h1>What's the Dish?    <img src="/images/chef.png" height="35px" width="35px"></h1>
     </div>
     <script type="text/javascript" src="scripts/scripthome.js"></script>
     <link rel="stylesheet" href="/styles/homestyle.css">
@@ -13,11 +13,11 @@
 <style>
 
 .header {
-  padding: 4px;
+  padding: 2px;
   text-align: center;
   background: black;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'Lobster', cursive;
   letter-spacing: 5px;
 }
@@ -34,7 +34,7 @@ body, html {
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
   /* Full height */
-  height: 100%;
+  height: 75%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -49,9 +49,11 @@ body, html {
 
 <div class="parallax"></div>
 
+<br><br>
+
 <h3>Simplifying the problem of deciding what to cook based on what’s left in your kitchen</h3>
 
-<div style="height:800px;background-color:white;font-size:36px">
+<div style="height:450px;background-color:white;font-size:36px">
   <div id="stepper" width="100%" height="50%" class="container">
     <figure>
         <img src="/images/icon1.png" width="150px" height="150px" />
@@ -65,27 +67,27 @@ body, html {
         <img src="/images/icon3.png" width="150px" height="150px">
         <figcaption>Get your recipes</figcaption>
     </figure>
+
+    <br><br>
+    <!-- animated button stuff below -->
+        <div class='containerbutton'>
+              <a class='animated-arrow' href="/ingredients">
+                <span class='the-arrow -left'>
+                  <span class='shaft'></span>
+                </span>
+                <span class='main'>
+                  <span class='text'>
+                    Start
+                  </span>
+                  <span class='the-arrow -right'>
+                    <span class='shaft'></span>
+                  </span>
+                </a>
+            </div>
+
   </div>
 
-
-<!-- animated button stuff below -->
-    <div class='containerbutton'>
-          <a class='animated-arrow' href="/ingredients">
-            <span class='the-arrow -left'>
-              <span class='shaft'></span>
-            </span>
-            <span class='main'>
-              <span class='text'>
-                Start
-              </span>
-              <span class='the-arrow -right'>
-                <span class='shaft'></span>
-              </span>
-            </a>
-        </div>
-
-        <style>
-
+      <style>
 
         .containerbutton {
           display: flex;
@@ -105,11 +107,11 @@ body, html {
         }
         .the-arrow.-left > .shaft {
           width: 0;
-          background-color: #999;
+          background-color: black;
         }
         .the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
           width: 0;
-          background-color: #999;
+          background-color: black;
         }
         .the-arrow.-left > .shaft:before {
           -webkit-transform: rotate(0);
@@ -140,7 +142,7 @@ body, html {
                   transform: rotate(-40deg);
         }
         .the-arrow > .shaft {
-          background-color: #999;
+          background-color: black;
           display: block;
           height: 1px;
           position: relative;
@@ -149,7 +151,7 @@ body, html {
           will-change: transform;
         }
         .the-arrow > .shaft:before, .the-arrow > .shaft:after {
-          background-color: #999;
+          background-color: black;
           content: "";
           display: block;
           height: 1px;
@@ -170,8 +172,9 @@ body, html {
 
         .animated-arrow {
           display: inline-block;
-          color: #999;
+          color: black;
           font-size: 1.25em;
+          font-family: 'Lobster', cursive;
           font-style: italic;
           text-decoration: none;
           position: relative;
@@ -236,7 +239,7 @@ body, html {
 
         </style>
 
-      </div>
+    </div>
 <div class="parallax"></div>
 
 <style>

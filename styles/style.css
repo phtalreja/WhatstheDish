@@ -7,17 +7,17 @@
 }
 /* end of styling for the autocomplete */
 
-#h1 {
+#header {
     text-align: center;
-    margin-top: 60px;
     z-index: 1;
+    margin-top: 2%;
     width: 70%;
     margin-left: 17.5%;
     margin-right: -18%;
     margin-bottom: 1%;
-    font-size: 45px;
+    font-size: 45%;
     color: #595656;
-    font-family: 'Lobster',cursive;
+    font-family:'Lobster';
   }
   label{
     font-size: 25px;
