@@ -4,7 +4,8 @@
   height: 900PX;
 }
 h1 {
-  margin-left: 40%;
+  /* margin-left: 40%; */
+  text-align: center;
   font-family: 'Lobster', cursive;
 }
 

@@ -59,26 +59,28 @@ h4{
 .Page_container{
   display: grid;
   grid-column: auto;
-  grid-row: auto auto auto auto auto auto;
-  width: 70%;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: auto auto auto auto auto auto; */
+  width: 45%;
   margin-top: -5%;
-  margin-left: 25%;
-  margin-bottom: -24.5%;
+  margin-left: 27%;
+  /* margin-bottom: -24.5%; */
 
 }
 
 .accordion_Fruits {
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 1;
-  width: 65%;
+  width: 100%;
   padding: 20px 20px 40px 20px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
+  margin: 5%;
   /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 2%;
-  margin-top: 4%;
-  margin-left: 7.5%;
+  /* margin-bottom: 2%; */
+  /* margin-top: 4%; */
+  /* margin-left: 7.5%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -87,17 +89,18 @@ h4{
 }
 
 .accordion_Vegetables {
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 2;
-  width: 65%;
+  width: 100%;
   padding: 20px 20px 40px 20px;
+  margin: 5%;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 2%;
+  /* margin-bottom: 2%;
   margin-top: 1%;
-  margin-left: 7.5%;
+  margin-left: 7.5%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -106,17 +109,18 @@ h4{
 }
 
 .accordion_Meats{
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 3;
-  width: 65%;
+  width: 100%;
   padding: 20px 20px 40px 20px;
+  margin: 5%;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 2%;
+  /* margin-bottom: 2%;
   margin-top: 1%;
-  margin-left: 7.5%;
+  margin-left: 7.5%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -124,17 +128,18 @@ h4{
   z-index: 2;
 }
 .accordion_Condiments{
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 5;
-  width: 46%;
+  width: 100%;
   padding: 20px 20px 40px 20px;
+  margin: 5%;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-bottom: 15px;
+  /* margin-bottom: 15px;
   margin-top: -2%;
-  margin-left: 30%;
+  margin-left: 30%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -142,17 +147,19 @@ h4{
   z-index: 2;
 }
 .accordion_Dairy{
-  grid-column: 1;
+  grid-column: 1 / 2;
   grid-row: 4;
-  width: 20%;
+  width: 95%;
   padding: 20px 20px 40px 20px;
+  margin: 5%;
+  margin-left: 10%;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
-  margin-top: 15%;
-  margin-left: 30%;
-  margin-right: 10%;
-  margin-bottom: 1.5%;
+  /* margin-top: 15%; */
+  /* margin-left: 30%;
+  margin-right: 10%; */
+  /* margin-bottom: 1.5%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -161,16 +168,21 @@ h4{
 
 }
 .accordion_Grains {
-  grid-column: 1;
+  grid-column: 2 / 3;
   grid-row: 4;
-  width: 20%;
+  width: 95%;
   padding: 20px 20px 40px 20px;
+  margin: 5%;
+  margin-left: 15%;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-top: -13%;
-  margin-left: 55%;
+  /* Changed below */
+  /* margin-top: -13%; */
+  /* margin-bottom: 1.5%; */
+
+  /* margin-left: 55%; */
   box-shadow: 0 0 40px #9A9A9A;
   background-color: solid white;
   /* border-radius: 10px 10px 10px 10px; */
@@ -181,22 +193,23 @@ h4{
 
 
 .ui-widget {
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 6;
   height: 10%;
-  width: 540px;
+  width: 100%;
   padding: 10px 0px 15px 15px;
   /* border: 2px outset; */
   border-radius: 40px 40px 40px 40px;
   -moz-border-radius: 40px 40px 40px 40px;
   -webkit-border-radius: 40px 40px 40px 40px;
-  border: 8px #F8F8FF;
-  margin-left: 30%;
+  /* border: 8px #F8F8FF; */
+  /* margin-left: 30%; */
+  text-align: center;
   margin-top: 1%;
   margin-bottom: 0%;
   /* margin: 10px 485px 0px 485px; */
   /* box-shadow: 10px 10px 10px 10px 	#DCDCDC; */
-  box-shadow: 0 0 20px #DCDCDC;
+  /* box-shadow: 0 0 20px #DCDCDC; */
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -235,15 +248,16 @@ h4{
 }
 #next {
   float: right;
-  margin-left: 78%;
+  margin-left: 82%;
   width:100px;
   height: 40px;
   z-index: 1;
   grid-column: 1;
   grid-row: 8;
-  margin-top: -12.9%;
+  /* margin-top: -12.9%;
   margin-bottom: 50%;
-  margin-right: 24%;
+  margin-right: 24%; */
+
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0 0 20px #DCDCDC;
 }
