@@ -192,3 +192,7 @@ h3{
         transform: translateY(-1080px) rotate(630deg);
     }
 }
+#changes {
+  width: "15px";
+  height: "15px";
+}
