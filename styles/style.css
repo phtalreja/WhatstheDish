@@ -79,7 +79,7 @@ h4{
   margin-bottom: 2%;
   margin-top: 4%;
   margin-left: 7.5%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -97,7 +97,7 @@ h4{
   margin-bottom: 2%;
   margin-top: 1%;
   margin-left: 7.5%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -115,7 +115,7 @@ h4{
   margin-bottom: 2%;
   margin-top: 1%;
   margin-left: 7.5%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -132,7 +132,7 @@ h4{
   margin-bottom: 15px;
   margin-top: -2%;
   margin-left: 30%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -149,7 +149,7 @@ h4{
   margin-left: 30%;
   margin-right: 10%;
   margin-bottom: 1.5%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
@@ -164,9 +164,9 @@ h4{
   border-radius: 40px 40px 40px 40px;
   border: 8px;
   /* margin: 10px 485px 0px 485px; */
-  margin-top: -11%;
+  margin-top: -13%;
   margin-left: 55%;
-  box-shadow: 0 0 20px #DCDCDC;
+  box-shadow: 0 0 40px #9A9A9A;
   /* border-radius: 10px 10px 10px 10px; */
   font-size: 20px;
   z-index: 2;
