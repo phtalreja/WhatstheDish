@@ -1,3 +1,1 @@
-Hello World!
-
-Typing some changes
+Final project for Google Computer Science Summer Institute in Seattle, WA. App designed to streamline the process of deciding what to cook based on what's left in your kitchen. Takes into account allergens and dietary restrictions. Uses Epicurious Recipe API, python, javascript, HTML/CSS. 
